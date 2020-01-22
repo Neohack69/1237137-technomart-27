@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Игорь Левин](https://up.htmlacademy.ru/htmlcss/27/user/1237137).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Пудов] (https://htmlacademy.ru/profile/kamelot43).
 
 ---
 
