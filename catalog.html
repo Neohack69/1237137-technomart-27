@@ -51,6 +51,14 @@
     <span class="catalogName">Перфораторы</span>
   <div>
     <form>
+      <p class="formHeader upperCase">Фильтр:</p>
+      <p>Цена:</p>
+      <input type="range" min="0" max="40000" value="30000">
+      <p>0</p>
+      <p>-</p>
+      <p>30000</p>
+    </form>
+    <form>
       <fieldset>
         <legend>Производители</legend>
         <input type="checkbox" name="production" value="Bosch" checked>Bosch<br>
@@ -75,51 +83,72 @@
     </form>
   </div>
 <div class="productTable">
+  <div class="sort">
+    <p class="formHeader upperCase">Сортировка</p>
+    <p class="upperCase">По цене</p>
+    <p class="upperCase">По типу</p>
+    <p class="upperCase">По функционалу</p>
+    <button class="sortControl"></button>
+    <button class="sortControl"></button>
+  </div>
   <ul class="productList">
     <li class="productListItem">
       <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>3000</p>
       <p class="lineTrough">22500 Р.</p>
-      <p class="redPrice">15500 Р.</p>
+      <a href="#" class="redPrice">15500 Р.</a>
     </li>
     <li class="productListItem">
       <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>6000</p>
       <p class="lineTrough">30500 Р.</p>
-      <p class="redPrice">25500 Р.</p>
+      <a href="#" class="redPrice">25500 Р.</a>
     </li>
     <li class="productListItem">
       <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>2000</p>
-      <p class="redPrice">12500 Р.</p>
+      <a href="#" class="redPrice">12500 Р.</a>
     </li>
     <li class="productListItem">
       <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>3000</p>
       <p class="lineTrough">22500 Р.</p>
-      <p class="redPrice">15500 Р.</p>
+      <a href="#" class="redPrice">15500 Р.</a>
     </li>
     <li class="productListItem">
       <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>6000</p>
       <p class="lineTrough">30500 Р.</p>
-      <p class="redPrice">25500 Р.</p>
+      <a href="#" class="redPrice">25500 Р.</a>
     </li>
     <li class="productListItem">
       <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>2000</p>
-      <p class="redPrice">12500 Р.</p>
+      <a href="#" class="redPrice">12500 Р.</a>
     </li>
     <li class="productListItem">
       <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>3000</p>
       <p class="lineTrough">22500 Р.</p>
-      <p class="redPrice">15500 Р.</p>
+      <a href="#" class="redPrice">15500 Р.</a>
     </li>
     <li class="productListItem">
       <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>6000</p>
       <p class="lineTrough">30500 Р.</p>
-      <p class="redPrice">25500 Р.</p>
+      <a href="#" class="redPrice">25500 Р.</a>
     </li>
     <li class="productListItem">
       <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>2000</p>
-      <p class="redPrice">12500 Р.</p>
+      <a href="#" class="redPrice">12500 Р.</a>
     </li>
   </ul>
+  <div class="pageSelect">
+    <a href="#" class="pageNumber">1</a>
+    <a href="#" class="pageNumber">2</a>
+    <a href="#" class="pageNumber">3</a>
+    <a href="#" class="nextPage upperCase">Следующая</a>
+  </div>
 </div>
+    <div class="catalogDescription">
+      <p class="upperCase">Пара слов о перфораторах</p>
+      <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+        <br>
+        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
+        В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+    </div>
   </main>
 <footer>
   <div class="footerTop">
@@ -155,7 +184,7 @@
         <li>
           <a href=""><img src="https://via.placeholder.com/25x25.png" alt="Вконтакте"></a>
         </li>
-        <li>>
+        <li>
           <a href=""><img src="https://via.placeholder.com/25x25.png" alt="FB"></a>
         </li>
         <li>
