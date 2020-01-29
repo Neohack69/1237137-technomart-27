@@ -46,41 +46,69 @@
     <main>
       <!-- Основные разделы товаров -->
       <section class="catalog">
+        <div class="topCatalog">
         <ul class="catalogList">
-          <li class="catalogItem goldBg new">
+          <li class="catalogItem new">
             <p>Материалы</p>
-            <a href="#" class="btnCatalog gold">На любой вкус</a>
+            <a href="#" class="btnCatalog">На любой вкус</a>
             <img src="https://via.placeholder.com/44x65.png" alt="Ведро краски">
           </li>
-          <li class="catalogItem blueBg">
+          <li class="catalogItem">
             <p>Инструмент</p>
-            <a href="#" class="btnCatalog blue">На все случаи</a>
+            <a href="#" class="btnCatalog">На все случаи</a>
             <img src="https://via.placeholder.com/75x61.png" alt="Дрель">
           </li>
-          <li class="catalogItem pinkBG">
+          <li class="catalogItem">
             <p>Техника</p>
-            <a href="#" class="btnCatalog pink">Для стройки</a>
+            <a href="#" class="btnCatalog">Для стройки</a>
             <img src="https://via.placeholder.com/78x62.png" alt="Трактор">
           </li>
-          <li class="catalogItem imageBg">
-            <p class="upperCase">Дрели</p>
-            <p>Соседям на радость!</p>
-            <a href="#" class="btn">Открыть каталог</a>
+        </ul>
+        </div>
+        <div class="bottomCatalog">
+        <ul>
+          <!-- Слайдер -->
+          <li class="catalogItem">
+            <div class="slider">
+              <ul>
+                <li>
+                  <p class="upperCase">Дрели</p>
+                  <p>Соседям на радость!</p>
+                  <a href="#" class="btn">Открыть каталог</a>
+                  <!-- Зачем вставлять изображение, если оно фоном будет в CSS? -->
+                </li>
+                <li>
+                  <p class="upperCase">Дрели2</p>
+                  <p>Соседям на радость!2</p>
+                  <a href="#" class="btn">Открыть каталог2</a>
+                  <!-- Зачем вставлять изображение, если оно фоном будет в CSS? -->
+                </li>
+              </ul>
+              <ul class="sliderBtn">
+                <li><img src="https://via.placeholder.com/78x62.png" alt="Предыдущая"></li>
+                <li><img src="https://via.placeholder.com/78x62.png" alt="Следующая"></li>
+              </ul>
+            </div>
+            <div class="sliderNav">
+              <span>L</span>
+              <span>R</span>
+            </div>
           </li>
-          <li class="catalogItem greenBg">
+          <li class="catalogItem">
             <p>Скидки 50%</p>
-            <a href="#" class="btnCatalog green">На 350 товаров</a>
+            <a href="#" class="btnCatalog">На 350 товаров</a>
             <img src="https://via.placeholder.com/59x72.png" alt="Корзина">
           </li>
-          <li class="catalogItem goldBg">
+          <li class="catalogItem">
             <p>Доставка</p>
-            <a href="#" class="btnCatalog gold">Доставка</a>
+            <a href="#" class="btnCatalog">Доставка</a>
             <img src="https://via.placeholder.com/78x63.png" alt="Автомобиль">
           </li>
         </ul>
+        </div>
       </section>
         <div class="popularItemsHeader">
-          <p class="upperCase">Популярные товары:</p>
+          <h2>Популярные товары:</h2>
           <a href="#" class="btn">Все популярные товары</a>
         </div>
         <div class="popularInCatalog">
@@ -90,28 +118,44 @@
               <p>Перфоратор <span class="upperCase">Bosch BFG</span> 6000</p>
               <p class="lineTrough">32500 Р.</p>
               <a href="#" class="redPrice">25500 Р.</a>
+              <div class="buyBtns">
+                <a href="#" class="greenBtn">Купить</a>
+                <a href="#" class="whiteBtn">В закладки</a>
+              </div>
             </li>
             <li class="popularItem">
               <img src="https://via.placeholder.com/218x170.png" alt="Перфоратор">
               <p>Перфоратор <span class="upperCase">Bosch BFG</span> 3000</p>
               <p class="lineTrough">22500 Р.</p>
               <a href="#" class="redPrice">15500 Р.</a>
+              <div class="buyBtns">
+                <a href="#" class="greenBtn">Купить</a>
+                <a href="#" class="whiteBtn">В закладки</a>
+              </div>
             </li>
             <li class="popularItem">
               <img src="https://via.placeholder.com/218x170.png" alt="Перфоратор">
               <p>Перфоратор <span class="upperCase">Bosch BFG</span> 6000</p>
               <p class="lineTrough">30500 Р.</p>
               <a href="#" class="redPrice">25500 Р.</a>
+              <div class="buyBtns">
+                <a href="#" class="greenBtn">Купить</a>
+                <a href="#" class="whiteBtn">В закладки</a>
+              </div>
             </li>
             <li class="popularItem new">
               <img src="https://via.placeholder.com/218x170.png" alt="Перфоратор">
               <p>Перфоратор <span class="upperCase">Bosch BFG</span> 2000</p>
               <a href="#" class="redPrice">12500 Р.</a>
+              <div class="buyBtns">
+                <a href="#" class="greenBtn">Купить</a>
+                <a href="#" class="whiteBtn">В закладки</a>
+              </div>
             </li>
           </ul>
         </div>
         <div class="popularItemsHeader">
-          <p class="upperCase">Популярные производители:</p>
+          <h2>Популярные производители:</h2>
           <a href="#" class="btn">Все производители</a>
         </div>
         <div class="popularManufacture">
@@ -152,10 +196,26 @@
           <li class="serviceItem">Гарантия</li>
           <li class="serviceItem">Кредит</li>
         </ul>
-        <p>Доставка</p>
-        <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br>
-        поднимая его на ваш этаж!</p>
-        <img src="https://via.placeholder.com/207x146.png" alt="Автомобиль">
+        <ul class="serviceDescriptionList">
+          <li class="serviceDescriptionItem">
+            <p>Доставка</p>
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br>
+              поднимая его на ваш этаж!</p>
+            <img src="https://via.placeholder.com/207x146.png" alt="Автомобиль">
+          </li>
+          <li class="serviceDescriptionItem">
+            <p>Гарантия</p>
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br>
+              поднимая его на ваш этаж!</p>
+            <img src="https://via.placeholder.com/207x146.png" alt="Автомобиль">
+          </li>
+          <li class="serviceDescriptionItem">
+            <p>Кредит</p>
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br>
+              поднимая его на ваш этаж!</p>
+            <img src="https://via.placeholder.com/207x146.png" alt="Автомобиль">
+          </li>
+        </ul>
       </div>
       <section class="about">
         <h2>Компания "Техномарт"</h2>
