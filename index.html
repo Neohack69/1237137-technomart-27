@@ -26,7 +26,9 @@
             <div class="telBorder">
               <a href="tel:+78125550555" class="tel">+7 (812) 555-05-55</a>
             </div>
-            <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            <p id="address-voice">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            <label for="address-voice" class="visually-hidden">город Санкт Петербург улица Большая Конюшенная дом 19
+              дробь 8</label>
           </div>
           <div class="loginLink">
             <a href="#" class="login">Войти</a>
@@ -85,8 +87,12 @@
               </ul>
               <ul class="sliderBtn">
                 <!-- Это идут белые кнопки внизу слайдера -->
-                <li><button>Предыдущая</button></li>
-                <li><button>Следующая</button></li>
+                <li>
+                  <button class="prev">Предыдущая</button>
+                </li>
+                <li>
+                  <button class="next">Следующая</button>
+                </li>
               </ul>
             </div>
             <div class="sliderNav">
@@ -113,42 +119,50 @@
         <div class="popularInCatalog">
           <ul class="popularItemsList">
             <li class="popularItem">
-              <img src="img/perforator_4.jpg" alt="Перфоратор BOSCH BSG 9000 зеленого цвета с длинным сверлом и длинной рукояткой">
+              <a href="#">
+                <img src="img/perforator_4.jpg" alt="Перфоратор Bosch BSG 9000">
+              </a>
               <p>Перфоратор <span class="upperCase">Bosch BFG</span> 9000</p>
               <p class="lineTrough">32500 Р.</p>
-              <a href="#" class="redPrice">25500 Р.</a>
+              <p class="redPrice">25500 Р.</p>
               <div class="buyBtns">
-                <a href="#" class="greenBtn">Купить</a>
-                <a href="#" class="whiteBtn">В закладки</a>
+                <a href="#" class="buyBtn">Купить</a>
+                <a href="#" class="bkmkBtn">В закладки</a>
               </div>
             </li>
             <li class="popularItem">
-              <img src="img/perforator_1.jpg" alt="Перфоратор BOSCH BGF 3000 зеленого цвета с аккумулятором и выпирающей рукояткой">
+              <a href="#">
+                <img src="img/perforator_1.jpg" alt="Перфоратор Bosch BGF 3000">
+              </a>
               <p>Перфоратор <span class="upperCase">Bosch BFG</span> 3000</p>
               <p class="lineTrough">22500 Р.</p>
-              <a href="#" class="redPrice">15500 Р.</a>
+              <p class="redPrice">15500 Р.</p>
               <div class="buyBtns">
-                <a href="#" class="greenBtn">Купить</a>
-                <a href="#" class="whiteBtn">В закладки</a>
+                <a href="#" class="buyBtn">Купить</a>
+                <a href="#" class="bkmkBtn">В закладки</a>
               </div>
             </li>
             <li class="popularItem">
-              <img src="img/perforator_2.jpg" alt="Перфоратор BOSCH BFG 6000 зеленого цвета с аккумулятором">
+              <a href="#">
+                <img src="img/perforator_2.jpg" alt="Перфоратор Bosch BFG 6000">
+              </a>
               <p>Перфоратор <span class="upperCase">Bosch BFG</span> 6000</p>
               <p class="lineTrough">30500 Р.</p>
-              <a href="#" class="redPrice">25500 Р.</a>
+              <p class="redPrice">25500 Р.</p>
               <div class="buyBtns">
-                <a href="#" class="greenBtn">Купить</a>
-                <a href="#" class="whiteBtn">В закладки</a>
+                <a href="#" class="buyBtn">Купить</a>
+                <a href="#" class="bkmkBtn">В закладки</a>
               </div>
             </li>
             <li class="popularItem new">
-              <img src="img/perforator_3.jpg" alt="Перфоратор BOSCH BFG 2000 зеленого цвета с аккумулятором и выпирающей рукояткой">
+              <a href="#">
+                <img src="img/perforator_3.jpg" alt="Перфоратор Bosch BFG 2000">
+              </a>
               <p>Перфоратор <span class="upperCase">Bosch BFG</span> 2000</p>
-              <a href="#" class="redPrice">12500 Р.</a>
+              <p class="redPrice">12500 Р</p>
               <div class="buyBtns">
-                <a href="#" class="greenBtn">Купить</a>
-                <a href="#" class="whiteBtn">В закладки</a>
+                <a href="#" class="buyBtn">Купить</a>
+                <a href="#" class="bkmkBtn">В закладки</a>
               </div>
             </li>
           </ul>
@@ -160,7 +174,7 @@
         <div class="popularManufacture">
           <ul class="popularManufactureList">
             <li class="popularManufactureItem">
-              <a href="#"><img src="img/bosch.jpg" alt="BOSCH"></a>
+              <a href="#"><img src="img/bosch.jpg" alt="Bosch"></a>
             </li>
             <li class="popularManufactureItem">
               <a href="#"><img src="img/makita.jpg" alt="Makita"></a>
@@ -272,10 +286,10 @@
             <li>
               <a href=""><img src="img/icon-vk.svg" alt="Вконтакте"></a>
             </li>
-            <li><a href=""><img src="img/icon-fb.svg" alt="FB"></a>
+            <li><a href=""><img src="img/icon-fb.svg" alt="Facebook"></a>
             </li>
             <li>
-              <a href=""><img src="img/icon-insta.svg" alt="INST"></a>
+              <a href=""><img src="img/icon-insta.svg" alt="Instagram"></a>
             </li>
           </ul>
         </div>
