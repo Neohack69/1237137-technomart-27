@@ -1,3 +1,51 @@
+@font-face {
+  font-family: 'Cuprum';
+  src: url("../fonts/cuprum.woff") format("woff");
+  src: url("../fonts/cuprum.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CuprumBold';
+  src: url("../fonts/cuprumbold.woff") format("woff");
+  src: url("../fonts/cuprumbold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CuprumBoldItalic';
+  src: url("../fonts/cuprumbolditalic.woff") format("woff");
+  src: url("../fonts/cuprumbolditalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CuprumItalic';
+  src: url("../fonts/cuprumitalic.woff") format("woff");
+  src: url("../fonts/cuprumitalic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url("../fonts/ptsans.woff") format("woff");
+  src: url("../fonts/ptsans.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Bold';
+  src: url("../fonts/ptsansbold.woff") format("woff");
+  src: url("../fonts/ptsansbold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -8,12 +56,190 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
+  font-family: Cuprum, sans-serif;
+  font-size: 16px; /* временно */
 }
 
 a {
   text-decoration: none;
 }
 
+h1 {
+  font-family: CuprumItalic, sans-serif;
+  font-size: 16px;
+  color: #ee3643;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+:-ms-input-placeholder, ::-ms-input-placeholder {
+  color: white;
+}
+
+.topLevel {
+  background-color: #293449;
+}
+
+.logo {
+  width: 220px;
+  height: 42px;
+  background-color: #ee3643;
+  box-shadow: #b52933 0 5px;
+  padding: 12px 56px;
+}
+
+.find input {
+  background-color: transparent;
+  border: none;
+  font-family: Cuprum, sans-serif;
+  color: white;
+  font-size: 17px;
+}
+
+.find form::before {
+  content: url("../img/icon-search.svg");
+  opacity: 0.3;
+}
+
+.upperCase {
+  text-transform: uppercase;
+}
+
 .visuallyHidden {
   display: none;
+}
+
+.bookmarksCart a {
+  font-size: 17px;
+  color: white;
+}
+
+.goToCart {
+  background-color: #63a63e;
+  padding: 16px 20px;
+}
+
+.contactsLogin {
+  background-color: #f4f7f9;
+}
+
+.address {
+  font-size: 14px;
+  color: #32425c;
+}
+
+.tel {
+  font-size: 21px;
+  color: #ee3643;
+}
+
+.tel::before {
+  content: url("../img/icon-phone.svg");
+}
+
+.loginLink a {
+  font-size: 21px;
+  color: black;
+  background-color: white;
+}
+
+.login::before {
+  content: url("../img/icon-login.svg");
+}
+
+.siteNav {
+  background-color: #32425c;
+}
+
+.siteNavList {
+  list-style-type: none;
+}
+
+.siteNavItem a {
+  color: white;
+}
+
+h2 {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 30px;
+  font-style: normal;
+}
+
+.about p, .map p {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+}
+
+.about ul {
+  list-style-type: none;
+}
+
+.about li {
+  list-style-image: url("../img/ul-item.jpg");
+  /* Картинка получается внизу, как сделать ее посередине? */
+}
+
+.about *, .map * {
+  margin-bottom: 40px;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: white;
+  background-color: #ee3643;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-radius: 2px;
+}
+
+.footerTop {
+  background-color: #32425c;
+  font-size: 18px;
+  color: white;
+}
+
+.footerTop .logo {
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+
+.footerTop ul {
+  list-style-type: none;
+}
+
+.footerTop a {
+  color: white;
+}
+
+.footerBottom {
+  background-color: #293449;
+  color: white;
+}
+
+.footerBottom a {
+  color: #ffd180;
+}
+
+.footerBottom li {
+  padding-top: 10px;
+  padding-left: 10px; /* Не удается выравнять значки */
+  margin: 5px;
+  background-color: #212a3a;
+  position: relative;
+  border-radius: 50%;
+  width: 41px;
+  height: 41px;
+}
+
+.footerBottom ul {
+  list-style-type: none;
+}
+
+.navYellow a {
+  color: #ffd180;
 }
