@@ -53,7 +53,9 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
+span {
+  display: block;
+}
 body {
   margin: 0;
   padding: 0;
@@ -153,6 +155,7 @@ h1 {
 
 .siteNav {
   background-color: #32425c;
+  box-shadow: #293449 0 5px;
 }
 
 .siteNavList {
@@ -227,7 +230,7 @@ h2 {
 
 .footerBottom li {
   padding-top: 10px;
-  padding-left: 10px; /* Не удается выравнять значки */
+  padding-left: 10px; /* Не удается выровнять значки */
   margin: 5px;
   background-color: #212a3a;
   position: relative;
@@ -242,4 +245,93 @@ h2 {
 
 .navYellow a {
   color: #ffd180;
+}
+
+.bookmarksCart :first-child::before {
+  content: url("../img/icon-bookmark.svg");
+  opacity: 0.3;
+}
+
+.bookmarksCart :first-child::after {
+  content: url("../img/icon-cart.svg");
+  opacity: 0.3;
+}
+
+.userName::before {
+  content: url("../img/icon-user.svg");
+}
+
+.contactsLogin ul {
+  list-style-type: none;
+}
+.contactsLogin ul a{
+  color: #32425c;
+  text-decoration: underline;
+}
+
+a.userName {
+  color: black;
+  font-size: 21px;
+}
+
+.breadcrumbs ul {
+  list-style-image: url("../img/icon-right-small.svg"); /* Не могу убрать отображение стрелку перед первым элементом, даже через :not(:first-child) */
+}
+
+.productListItem {
+  border: #e5e5e5 1px solid;
+}
+
+.productListItem p, .popularItem {
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.lineTrough {
+  text-decoration: line-through;
+  color: #999999;
+}
+
+.redPrice {
+  background-image: url("../img/red-button.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  height: 38px;
+}
+
+.popularInCatalog ul, .productList {
+  list-style-type: none;
+}
+
+.buyBtns {
+  display: none;
+}
+
+li:hover img {
+  display: none;
+}
+
+li:hover .buyBtns {
+  display: block;
+}
+
+.buyBtn {
+  background-color: #63a63e;
+  padding: 13px 45px 11px 19px;
+  border-radius: 2px;
+  box-shadow: #367315 0 3px;
+  color: white;
+  font-size: 14px;
+}
+.buyBtn::before {
+  content: url("../img/icon-cart.svg");
+  padding-right: 22px;
+}
+
+.bkmkBtn {
+  border: #63a63e 3px solid;
+  border-radius: 2px;
+  padding: 9px 27px 9px 30px;
 }
