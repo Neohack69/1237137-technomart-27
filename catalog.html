@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Техномарт</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
   <div class="topLevel">
     <div class="logoFind">
-      <a href="#" class="logo"><img src="img/logo-technomart.svg" alt="Техномарт"></a>
+      <a href="index.html" class="logo"><img src="img/logo-technomart.svg" alt="Техномарт"></a>
       <p>Поиск</p>
     </div>
     <div class="bookmarksCart">
@@ -60,11 +61,11 @@
           <!-- <label for="cost" class="fieldsetLabel">Цена:</label> -->
           <input type="range" id="filter-cost" min="0" max="40000" step="500" value="40000" name="cost"
                  onmouseup="myFunction()">
-          <label for="filter-cost" class="visually-hidden">Диапазон стоимости</label>
+          <label for="filter-cost" class="visuallyHidden">Диапазон стоимости</label>
           <input type="text" value="0" id="minCost">
-          <label for="minCost" class="visually-hidden">Минимальная стоимость</label>
+          <label for="minCost" class="visuallyHidden">Минимальная стоимость</label>
           <input type="text" value="40000" id="maxCost">
-          <label for="maxCost" class="visually-hidden">Максимальная стоимость</label>
+          <label for="maxCost" class="visuallyHidden">Максимальная стоимость</label>
         </fieldset>
         <fieldset class="productionsFieldset">
           <legend>Производители:</legend>
@@ -230,15 +231,24 @@
     <a href="#" class="pageNumber">3</a>
     <a href="#" class="nextPage upperCase">Следующая</a>
   </div>
-</div>
+    </div>
     <div class="catalogDescription">
       <p class="upperCase">Пара слов о перфораторах</p>
-      <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+      <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче,
+        бетоне и камне.
         <br>
-        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
-        В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
+        шуруповерта и отбойного молотка.
+        В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная
+        дрель.</p>
     </div>
   </main>
+<!-- Попап с корзиной -->
+<div class="addToCart visuallyHidden">
+  <p>Товар добавлен в корзину!</p>
+  <a href="#">Оформить заказ</a>
+  <a href="#">Продолжить покупки</a>
+</div>
 <footer>
   <div class="footerTop">
     <a href="#" class="logo"><img src="img/logo-technomart.svg" alt="Техномарт"></a>
@@ -291,7 +301,6 @@
     </div>
   </div>
 </footer>
-</body>
 <script>
   function myFunction() {
     var x = document.getElementById("filter-cost").value;
@@ -299,4 +308,5 @@
     console.log(x);
   }
 </script>
+</body>
 </html>

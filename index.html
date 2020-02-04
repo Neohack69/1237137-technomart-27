@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
@@ -12,7 +13,10 @@
             <img src="img/logo-technomart.svg" alt="Техномарт"></a>
         </div>
         <div class="find">
-          <span>Поиск</span>
+          <form action="https://echo.htmlacademy.ru">
+            <input type="text" id="search" placeholder="Поиск:" name="searchText">
+            <label for="search" class="visuallyHidden">Строка поиска</label>
+          </form>
         </div>
         <div class="bookmarksCart">
           <a href="#">Закладки: 0</a>
@@ -26,9 +30,7 @@
             <div class="telBorder">
               <a href="tel:+78125550555" class="tel">+7 (812) 555-05-55</a>
             </div>
-            <p id="address-voice">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-            <label for="address-voice" class="visually-hidden">город Санкт Петербург улица Большая Конюшенная дом 19
-              дробь 8</label>
+            <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
           <div class="loginLink">
             <a href="#" class="login">Войти</a>
@@ -75,13 +77,13 @@
                 <li>
                   <p class="upperCase">Дрели</p>
                   <p>Соседям на радость!</p>
-                  <a href="#" class="btn">Открыть каталог</a>
+                  <a href="catalog.html" class="btn">Открыть каталог</a>
                   <!-- Зачем вставлять изображение, если оно фоном будет в CSS? -->
                 </li>
                 <li>
                   <p class="upperCase">Дрели2</p>
                   <p>Соседям на радость!2</p>
-                  <a href="#" class="btn">Открыть каталог2</a>
+                  <a href="catalog.html" class="btn">Открыть каталог2</a>
                   <!-- Зачем вставлять изображение, если оно фоном будет в CSS? -->
                 </li>
               </ul>
@@ -247,21 +249,41 @@
       <section class="map">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами,<br>
-        заехав в наш офис:</p>
-        <a href="#"><img src="img/map.jpg" alt="Схема проезда"></a><br>
+          заехав в наш офис:</p>
+        <a href="#mapPopup"><img src="img/map.jpg" alt="Схема проезда"></a><br>
         <a href="#" class="btn">Заблудились? Напишите нам</a>
       </section>
     </main>
+    <!-- Попап с картой -->
+    <div class="popupWindow visuallyHidden" id="mapPopup">
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3Adb6e88ce5aa1e869aebe1b468fa13dc79cafcc3ff21963ca692083d3d555bf95&amp;source=constructor"
+        width="940" height="446"></iframe>
+    </div>
+    <!-- Попап с формой обратной связи -->
+    <div class="feedback visuallyHidden">
+      <form action="https://echo.htmlacademy.ru">
+        <fieldset>
+          <label for="name">Ваше имя:</label>
+          <input type="text" id="name" name="feedbackName">
+          <label for="email">Ваш e-mail:</label>
+          <input type="text" id="email" name="feedbackMail">
+          <label for="letter">Текст письма:</label>
+          <textarea name="letterForm" id="letter" cols="100" rows="10"></textarea>
+          <input type="submit" value="Отправить">
+        </fieldset>
+      </form>
+    </div>
     <footer>
       <div class="footerTop">
         <a href="#" class="logo"><img src="img/logo-technomart.svg" alt="Техномарт"></a>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
           <a href="tel:+78125550555" class="tel">+7 (812) 555-05-55</a>
         </p>
-       <nav>
-        <ul>
-          <li><a href="#">Компания</a></li>
-          <li><a href="#">Новости</a></li>
+        <nav>
+          <ul>
+            <li><a href="#">Компания</a></li>
+            <li><a href="#">Новости</a></li>
           <li><a href="#">Каталог</a></li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
