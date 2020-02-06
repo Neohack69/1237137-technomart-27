@@ -135,6 +135,7 @@ h1 {
 
 .contactsLogin {
   background-color: #f4f7f9;
+  display: flex;
 }
 
 .address {
@@ -332,7 +333,8 @@ li:hover img.itemCard {
 }
 
 li:hover .buyBtns {
-  display: block;
+  display: inline-block;
+  word-wrap: normal;
 }
 
 .slider ul {
@@ -374,10 +376,67 @@ li:hover .buyBtns {
 .new:before {
   content:'';
   position:absolute;
-  top:0;
-  right:0;
   z-index:10;
   width:60px;
   height:60px;
   background:url(../img/new-flag.png) no-repeat 0 0;
 }
+
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  display: flex;
+}
+
+main {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.siteNavList{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  vertical-align: center;
+}
+
+nav {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 55px;
+}
+
+.siteNavItem {
+  font-size: 17px;
+}
+
+.topLevel {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.headerTop {
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalogList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bottomCatalog ul {
+  display: flex;
+}
+
+.catalogItem {
+  width: 300px;
+  height: 123px;
+}
+
