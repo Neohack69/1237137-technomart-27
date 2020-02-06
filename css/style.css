@@ -190,15 +190,17 @@ h2 {
   list-style-type: none;
 }
 
-.about li:before
-{content:'';
+.about li:before {
+  content:'';
   position: relative;
   left:-36px;
   top:10px;
   display:block;
   width:25px;
   height:2px;
-  background:#fb565a}
+  background:#fb565a
+}
+
 
 .about *, .map * {
   margin-bottom: 40px;
@@ -298,6 +300,9 @@ a.userName {
 
 .productListItem {
   border: #e5e5e5 1px solid;
+  display: flex;
+  flex-direction: column;
+  width: 220px;
 }
 
 .productListItem p, .popularItem {
@@ -333,8 +338,11 @@ li:hover img.itemCard {
 }
 
 li:hover .buyBtns {
-  display: inline-block;
-  word-wrap: normal;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 43px;
+  margin-left: 43px;
+
 }
 
 .slider ul {
@@ -437,6 +445,9 @@ nav {
 
 .catalogItem {
   width: 300px;
-  height: 123px;
+  min-height: 123px;
 }
 
+.productionsFieldset ul {
+  list-style-type: none;
+}
