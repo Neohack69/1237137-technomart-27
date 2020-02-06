@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   src: url("../fonts/cuprum.woff") format("woff");
   src: url("../fonts/cuprum.woff2") format("woff2");
   font-weight: normal;
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: 'CuprumBold';
+  font-family: "Cuprum";
   src: url("../fonts/cuprumbold.woff") format("woff");
   src: url("../fonts/cuprumbold.woff2") format("woff2");
   font-weight: bold;
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: 'CuprumBoldItalic';
+  font-family: "Cuprum";
   src: url("../fonts/cuprumbolditalic.woff") format("woff");
   src: url("../fonts/cuprumbolditalic.woff2") format("woff2");
   font-weight: bold;
@@ -23,7 +23,7 @@
 }
 
 @font-face {
-  font-family: 'CuprumItalic';
+  font-family: "Cuprum";
   src: url("../fonts/cuprumitalic.woff") format("woff");
   src: url("../fonts/cuprumitalic.woff2") format("woff2");
   font-weight: normal;
@@ -31,7 +31,7 @@
 }
 
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   src: url("../fonts/ptsans.woff") format("woff");
   src: url("../fonts/ptsans.woff2") format("woff2");
   font-weight: normal;
@@ -39,7 +39,7 @@
 }
 
 @font-face {
-  font-family: 'PT Sans Bold';
+  font-family: "PT Sans";
   src: url("../fonts/ptsansbold.woff") format("woff");
   src: url("../fonts/ptsansbold.woff2") format("woff2");
   font-weight: bold;
@@ -59,7 +59,7 @@ span {
 body {
   margin: 0;
   padding: 0;
-  font-family: Cuprum, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 16px; /* временно */
 }
 
@@ -68,7 +68,8 @@ a {
 }
 
 h1 {
-  font-family: CuprumItalic, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
+  font-style: italic;
   font-size: 16px;
   color: #ee3643;
 }
@@ -97,7 +98,7 @@ h1 {
 .find input {
   background-color: transparent;
   border: none;
-  font-family: Cuprum, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   color: white;
   font-size: 17px;
 }
@@ -112,7 +113,14 @@ h1 {
 }
 
 .visuallyHidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .bookmarksCart a {
@@ -167,13 +175,13 @@ h1 {
 }
 
 h2 {
-  font-family: 'Cuprum', sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 30px;
   font-style: normal;
 }
 
 .about p, .map p {
-  font-family: "PT Sans", sans-serif;
+  font-family: PT Sans, Arial, sans-serif;
   font-size: 13px;
 }
 
@@ -181,10 +189,15 @@ h2 {
   list-style-type: none;
 }
 
-.about li {
-  list-style-image: url("../img/ul-item.jpg");
-  /* Картинка получается внизу, как сделать ее посередине? */
-}
+.about li:before
+{content:'';
+  position: relative;
+  left:-36px;
+  top:10px;
+  display:block;
+  width:25px;
+  height:2px;
+  background:#fb565a}
 
 .about *, .map * {
   margin-bottom: 40px;
@@ -243,6 +256,10 @@ h2 {
   list-style-type: none;
 }
 
+.footerBottom li {
+  font-size: 0;
+}
+
 .navYellow a {
   color: #ffd180;
 }
@@ -283,8 +300,9 @@ a.userName {
 }
 
 .productListItem p, .popularItem {
-  font-family: "PT Sans Bold", sans-serif;
+  font-family: PT Sans, Arial, sans-serif;
   font-size: 18px;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -309,12 +327,28 @@ a.userName {
   display: none;
 }
 
-li:hover img {
+li:hover img.itemCard {
   display: none;
 }
 
 li:hover .buyBtns {
   display: block;
+}
+
+.slider ul {
+  list-style-type: none;
+}
+
+.slider ul:first-child {
+  background-image: url("../img/slider-1.jpg");
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.slider ul:last-child {
+  background-image: url("../img/slider-2.jpg");
+  background-repeat: no-repeat;
+  color: white;
 }
 
 .buyBtn {
@@ -334,4 +368,16 @@ li:hover .buyBtns {
   border: #63a63e 3px solid;
   border-radius: 2px;
   padding: 9px 27px 9px 30px;
+  color: #32425c;
+}
+
+.new:before {
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  z-index:10;
+  width:60px;
+  height:60px;
+  background:url(../img/new-flag.png) no-repeat 0 0;
 }

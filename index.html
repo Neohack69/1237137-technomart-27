@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -14,7 +15,7 @@
         </div>
         <div class="find">
           <form action="https://echo.htmlacademy.ru">
-            <input type="text" id="search" placeholder="Поиск:" name="searchText">
+            <input type="search" id="search" placeholder="Поиск:" name="searchText">
             <label for="search" class="visuallyHidden">Строка поиска</label>
           </form>
         </div>
@@ -50,7 +51,6 @@
       </nav>
     </header>
     <main>
-      <!-- Основные разделы товаров -->
       <section class="catalog">
         <div class="topCatalog">
         <ul class="catalogList">
@@ -78,13 +78,11 @@
                   <p class="upperCase">Дрели</p>
                   <p>Соседям на радость!</p>
                   <a href="catalog.html" class="btn">Открыть каталог</a>
-                  <!-- Зачем вставлять изображение, если оно фоном будет в CSS? -->
                 </li>
                 <li>
-                  <p class="upperCase">Дрели2</p>
-                  <p>Соседям на радость!2</p>
-                  <a href="catalog.html" class="btn">Открыть каталог2</a>
-                  <!-- Зачем вставлять изображение, если оно фоном будет в CSS? -->
+                  <p class="upperCase">Перфораторы</p>
+                  <p>Настоящие мужские игрушки</p>
+                  <a href="catalog.html" class="btn">Открыть каталог</a>
                 </li>
               </ul>
               <ul class="sliderBtn">
@@ -98,7 +96,6 @@
               </ul>
             </div>
             <div class="sliderNav">
-              <!-- а это боковые кнопки, просто наметал, не окончательный вид -->
               <span>L</span>
               <span>R</span>
             </div>
@@ -122,50 +119,50 @@
           <ul class="popularItemsList">
             <li class="popularItem">
               <a href="#">
-                <img src="img/perforator_4.jpg" alt="Перфоратор Bosch BSG 9000">
+                <img src="img/perforator_4.jpg" alt="Перфоратор Bosch BSG 9000" class="itemCard">
               </a>
+              <div class="buyBtns">
+                <a href="#" class="buyBtn">Купить</a>
+                <a href="#" class="bkmkBtn">В закладки</a>
+              </div>
               <p>Перфоратор <span class="upperCase">Bosch BFG</span> 9000</p>
               <p class="lineTrough">32500 Р.</p>
               <p class="redPrice">25500 Р.</p>
+            </li>
+            <li class="popularItem">
+              <a href="#">
+                <img src="img/perforator_1.jpg" alt="Перфоратор Bosch BGF 3000" class="itemCard">
+              </a>
               <div class="buyBtns">
                 <a href="#" class="buyBtn">Купить</a>
                 <a href="#" class="bkmkBtn">В закладки</a>
               </div>
-            </li>
-            <li class="popularItem">
-              <a href="#">
-                <img src="img/perforator_1.jpg" alt="Перфоратор Bosch BGF 3000">
-              </a>
               <p>Перфоратор <span class="upperCase">Bosch BFG</span> 3000</p>
               <p class="lineTrough">22500 Р.</p>
               <p class="redPrice">15500 Р.</p>
-              <div class="buyBtns">
-                <a href="#" class="buyBtn">Купить</a>
-                <a href="#" class="bkmkBtn">В закладки</a>
-              </div>
             </li>
             <li class="popularItem">
               <a href="#">
-                <img src="img/perforator_2.jpg" alt="Перфоратор Bosch BFG 6000">
+                <img src="img/perforator_2.jpg" alt="Перфоратор Bosch BFG 6000" class="itemCard">
               </a>
+              <div class="buyBtns">
+                <a href="#" class="buyBtn">Купить</a>
+                <a href="#" class="bkmkBtn">В закладки</a>
+              </div>
               <p>Перфоратор <span class="upperCase">Bosch BFG</span> 6000</p>
               <p class="lineTrough">30500 Р.</p>
               <p class="redPrice">25500 Р.</p>
-              <div class="buyBtns">
-                <a href="#" class="buyBtn">Купить</a>
-                <a href="#" class="bkmkBtn">В закладки</a>
-              </div>
             </li>
             <li class="popularItem new">
               <a href="#">
-                <img src="img/perforator_3.jpg" alt="Перфоратор Bosch BFG 2000">
+                <img src="img/perforator_3.jpg" alt="Перфоратор Bosch BFG 2000" class="itemCard">
               </a>
-              <p>Перфоратор <span class="upperCase">Bosch BFG</span> 2000</p>
-              <p class="redPrice">12500 Р</p>
               <div class="buyBtns">
                 <a href="#" class="buyBtn">Купить</a>
                 <a href="#" class="bkmkBtn">В закладки</a>
               </div>
+              <p>Перфоратор <span class="upperCase">Bosch BFG</span> 2000</p>
+              <p class="redPrice">12500 Р</p>
             </li>
           </ul>
         </div>
@@ -205,7 +202,6 @@
         <h2>Сервисы</h2>
         <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        <!-- Далее скорее всего идут кнопки и динамическое переключение div -->
         <ul class="serviceList">
           <li class="serviceItem">
             <button type="button">Доставка</button>
@@ -225,13 +221,15 @@
           </li>
           <li class="serviceDescriptionItem">
             <p>Гарантия</p>
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br>
-              поднимая его на ваш этаж!</p>
+            <p>Если купленный у нас товар поломается или заискрит,
+              а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
+              Дом уж восстановите как-нибудь сами.</p>
           </li>
           <li class="serviceDescriptionItem">
             <p>Кредит</p>
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br>
-              поднимая его на ваш этаж!</p>
+            <p>Залезть в долговую яму стало проще!
+              Кредитные консультанты придут вам на помощь.</p>
+            <a href="#" class="btn"></a>
           </li>
         </ul>
       </div>
@@ -302,15 +300,15 @@
           <p>&copy; 2010-2017 Компания "Техномарт"<br>
           Все права защищены</p>
         </div>
-        <div>
+        <div class="social">
           <ul>
             <li>
-              <a href=""><img src="img/icon-vk.svg" alt="Вконтакте"></a>
+              <a href=""><img src="img/icon-vk.svg" alt="Вконтакте">Вконтакте</a>
             </li>
-            <li><a href=""><img src="img/icon-fb.svg" alt="Facebook"></a>
+            <li><a href=""><img src="img/icon-fb.svg" alt="Facebook">Facebook</a>
             </li>
             <li>
-              <a href=""><img src="img/icon-insta.svg" alt="Instagram"></a>
+              <a href=""><img src="img/icon-insta.svg" alt="Instagram">Instagram</a>
             </li>
           </ul>
         </div>

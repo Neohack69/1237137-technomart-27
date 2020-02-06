@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Техномарт</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<header>
-  <div class="topLevel">
-    <div class="logoFind">
-      <a href="index.html" class="logo"><img src="img/logo-technomart.svg" alt="Техномарт"></a>
-      <div class="find">
+  </head>
+  <body>
+  <header>
+    <div class="topLevel">
+      <div class="logoFind">
+        <a href="index.html" class="logo"><img src="img/logo-technomart.svg" alt="Техномарт"></a>
+        <div class="find">
         <form action="https://echo.htmlacademy.ru">
-          <input type="text" id="search" placeholder="Поиск:" name="searchText">
+          <input type="search" id="search" placeholder="Поиск:" name="searchText">
           <label for="search" class="visuallyHidden">Строка поиска</label>
         </form>
       </div>
@@ -23,6 +24,7 @@
       <a href="#" class="goToCart">Оформить заказ</a>
     </div>
     <div class="contactsLogin">
+      <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
       <div class="telAddress">
         <div class="telBorder">
           <a href="tel:+78125550555" class="tel">+7 (812) 555-05-55</a>
@@ -36,7 +38,7 @@
         <li class="account"><a href="#">Личный кабинет</a></li>
       </ul>
     </div>
-  </div>
+    </div>
   <nav class="siteNav">
     <ul class="siteNavList">
       <li class="siteNavItem"><a href="index.html">Главная</a></li>
@@ -126,7 +128,7 @@
   <ul class="productList">
     <li class="productListItem">
       <a href="#">
-        <img src="img/perforator_1.jpg" alt="Перфоратор BOSCH BGF 3000">
+        <img src="img/perforator_1.jpg" alt="Перфоратор BOSCH BGF 3000" class="itemCard">
       </a>
       <div class="buyBtns">
         <a href="#" class="buyBtn upperCase">Купить</a>
@@ -138,7 +140,7 @@
     </li>
     <li class="productListItem">
       <a href="#">
-        <img src="img/perforator_2.jpg" alt="Перфоратор BOSCH BFG 6000">
+        <img src="img/perforator_2.jpg" alt="Перфоратор BOSCH BFG 6000" class="itemCard">
       </a>
       <div class="buyBtns">
         <a href="#" class="buyBtn upperCase">Купить</a>
@@ -147,11 +149,10 @@
       <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>6000</p>
       <p class="lineTrough">30500 Р.</p>
       <p class="redPrice">25500 Р.</p>
-
     </li>
-    <li class="productListItem">
+    <li class="productListItem new">
       <a href="#">
-        <img src="img/perforator_3.jpg" alt="Перфоратор BOSCH BFG 2000">
+        <img src="img/perforator_3.jpg" alt="Перфоратор BOSCH BFG 2000" class="itemCard">
       </a>
       <div class="buyBtns">
         <a href="#" class="buyBtn upperCase">Купить</a>
@@ -166,7 +167,7 @@
         <a href="#" class="bkmkBtn upperCase">В закладки</a>
       </div>
       <a href="#">
-        <img src="img/perforator_1.jpg" alt="Перфоратор BOSCH BGF 3000">
+        <img src="img/perforator_1.jpg" alt="Перфоратор BOSCH BGF 3000" class="itemCard">
       </a>
       <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>3000</p>
       <p class="lineTrough">22500 Р.</p>
@@ -174,7 +175,7 @@
     </li>
     <li class="productListItem">
       <a href="#">
-        <img src="img/perforator_2.jpg" alt="Перфоратор BOSCH BFG 6000">
+        <img src="img/perforator_2.jpg" alt="Перфоратор BOSCH BFG 6000" class="itemCard new">
       </a>
       <div class="buyBtns">
         <a href="#" class="buyBtn upperCase">Купить</a>
@@ -186,7 +187,7 @@
     </li>
     <li class="productListItem">
       <a href="#">
-        <img src="img/perforator_3.jpg" alt="Перфоратор BOSCH BFG 2000">
+        <img src="img/perforator_3.jpg" alt="Перфоратор BOSCH BFG 2000" class="itemCard">
       </a>
       <div class="buyBtns">
         <a href="#" class="buyBtn upperCase">Купить</a>
@@ -197,7 +198,7 @@
     </li>
     <li class="productListItem">
       <a href="#">
-        <img src="img/perforator_1.jpg" alt="Перфоратор BOSCH BGF 3000">
+        <img src="img/perforator_1.jpg" alt="Перфоратор BOSCH BGF 3000" class="itemCard new">
       </a>
       <div class="buyBtns">
         <a href="#" class="buyBtn upperCase">Купить</a>
@@ -209,7 +210,7 @@
     </li>
     <li class="productListItem">
       <a href="#">
-        <img src="img/perforator_2.jpg" alt="Перфоратор BOSCH BFG 6000">
+        <img src="img/perforator_2.jpg" alt="Перфоратор BOSCH BFG 6000" class="itemCard">
       </a>
       <div class="buyBtns">
         <a href="#" class="buyBtn upperCase">Купить</a>
@@ -221,8 +222,7 @@
     </li>
     <li class="productListItem">
       <a href="#">
-        <img src="img/perforator_3.jpg"
-             alt="Перфоратор BOSCH BFG 2000 зеленого цвета с аккумулятором и выпирающей рукояткой">
+        <img src="img/perforator_3.jpg" alt="Перфоратор BOSCH BFG 2000" class="itemCard">
       </a>
       <div class="buyBtns">
         <a href="#" class="buyBtn upperCase">Купить</a>
@@ -285,7 +285,7 @@
       <p>&copy; 2010-2017 Компания "Техномарт"<br>
         Все права защищены</p>
     </div>
-    <div>
+    <div class="social">
       <ul>
         <li>
           <a href=""><img src="img/icon-vk.svg" alt="Вконтакте"></a>
