@@ -83,8 +83,12 @@ h1 {
   color: white;
 }
 
-.topLevel {
-  background-color: #293449;
+.headline {
+  background-color: #32425c;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
 }
 
 .logo {
@@ -136,6 +140,9 @@ h1 {
 .contactsLogin {
   background-color: #f4f7f9;
   display: flex;
+  margin-left: 0;
+  margin-right: 0;
+  justify-content: space-between;
 }
 
 .address {
@@ -405,18 +412,31 @@ main {
   margin-right: auto;
 }
 
-.siteNavList{
+.siteNavList {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   vertical-align: center;
+  padding: 10px;
+}
+
+.breadcrumbs ul {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.breadcrumbs li {
+  padding-right: 20px;
+}
+
+.sort p {
+  display: inline;
 }
 
 nav {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
-  height: 55px;
 }
 
 .siteNavItem {
@@ -425,7 +445,11 @@ nav {
 
 .topLevel {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
 }
 
 .headerTop {
@@ -450,4 +474,42 @@ nav {
 
 .productionsFieldset ul {
   list-style-type: none;
+}
+
+.footerTop {
+  display: flex;
+  max-width: 960px;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerTop ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerTop li {
+  padding-right: 10px;
+}
+
+.userName a {
+  display: inline-block;
+}
+
+.footerBottom {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
+.footerBottom ul {
+  display: flex;
+  flex-wrap: nowrap;
 }
