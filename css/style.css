@@ -75,7 +75,7 @@ h1 {
 }
 
 ::placeholder {
-  color: white;
+  color: #d4d6db;
   opacity: 1;
 }
 
@@ -88,7 +88,13 @@ h1 {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  justify-content: space-between;
+  justify-content: space-around;
+  min-width: 940px;
+  align-items: center;
+}
+
+.headline a{
+  color: white;
 }
 
 .logo {
@@ -96,20 +102,57 @@ h1 {
   height: 42px;
   background-color: #ee3643;
   box-shadow: #b52933 0 5px;
-  padding: 12px 56px;
+  text-align: center;
+  padding-top: 14px;
+  padding-bottom: 11px;
+}
+
+.logo:hover {
+  background-color: #ca2c37;
+}
+
+.logo:active {
+  background-color: #ba2732;
 }
 
 .find input {
   background-color: transparent;
   border: none;
   font-family: Cuprum, Arial, sans-serif;
-  color: white;
+  color: #d4d6db;
   font-size: 17px;
+
 }
 
 .find form::before {
   content: url("../img/icon-search.svg");
   opacity: 0.3;
+}
+
+.find form:hover {
+  background-color: #212a3a;
+}
+
+.find form:hover::before {
+  opacity: 1 ;
+}
+
+.find form:active::before {
+  content: url("../img/icon-search-red.svg");
+  opacity: 1;
+}
+
+.find form:hover::placeholder {
+  color: white;
+}
+
+.find input:focus {
+  color: black;
+  background-color: white;
+}
+
+.bookmarksCart a:hover{
+  background-color: #161d29;
 }
 
 .upperCase {
@@ -134,15 +177,22 @@ h1 {
 
 .goToCart {
   background-color: #63a63e;
-  padding: 16px 20px;
+}
+
+.goToCart:hover {
+  background-color: #5fbb2d;
+}
+
+.goToCart:active {
+  background-color: #518534;
 }
 
 .contactsLogin {
   background-color: #f4f7f9;
   display: flex;
-  margin-left: 0;
-  margin-right: 0;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding-top: 46px;
+
 }
 
 .address {
@@ -159,13 +209,36 @@ h1 {
   content: url("../img/icon-phone.svg");
 }
 
+.find {
+  width: 260px;
+}
+
 .loginLink a {
   font-size: 21px;
   color: black;
   background-color: white;
+  width: 121px;
+  height: 45px; /* Почему не задаются размеры? */
 }
 
 .login::before {
+  content: url("../img/icon-login.svg");
+}
+
+.loginLink a:hover {
+  color: #ee3643;
+}
+
+.login:hover::before {
+  content: url("../img/icon-login-blue.svg");
+  opacity: 1;
+}
+
+.loginLink a:active {
+  color: #b2b2b2;
+}
+
+.login:active::before {
   content: url("../img/icon-login.svg");
 }
 
@@ -186,6 +259,8 @@ h2 {
   font-family: Cuprum, Arial, sans-serif;
   font-size: 30px;
   font-style: normal;
+  text-transform: uppercase;
+  color: #32425c;
 }
 
 .about p, .map p {
@@ -221,6 +296,15 @@ h2 {
   padding-top: 14px;
   padding-bottom: 14px;
   border-radius: 2px;
+  height: 38px;
+}
+
+.btn:hover {
+  background-color: #ca2c37;
+}
+
+.btn:active {
+  background-color: #ba2732;
 }
 
 .footerTop {
@@ -279,13 +363,78 @@ h2 {
   opacity: 0.3;
 }
 
-.bookmarksCart :first-child::after {
+.bookmarksCart :last-child::before {
   content: url("../img/icon-cart.svg");
   opacity: 0.3;
 }
 
+.bookmarksCart :first-child:hover::before {
+  content: url("../img/icon-bookmark.svg");
+  opacity: 1;
+}
+
+.bookmarksCart :last-child:hover::before {
+  content: url("../img/icon-cart.svg");
+  opacity: 1;
+}
+
+.bookmarksCart :first-child:active::before {
+  content: url("../img/icon-bookmark.svg");
+  opacity: 0.5;
+}
+
+.bookmarksCart :last-child:active::before {
+  content: url("../img/icon-cart.svg");
+  opacity: 0.5;
+}
+
+.logout {
+  background-image: url("../img/icon-logout.svg");
+  background-repeat: no-repeat;
+}
+
+.logout {
+  color: transparent;
+}
+
+.logout:hover {
+  background-image: url("../img/icon-logout-blue.svg");
+  color: transparent;
+}
+
+.logout:active {
+  background-image: url("../img/icon-logout.svg");
+  color: transparent;
+}
+
+.shoppingHistory a:hover {
+  color: #ee3643;
+}
+
+.account a:hover {
+  color: #ee3643;
+}
+
+.shoppingHistory a:active {
+  color: #b7bfc8;
+}
+
+.account a:active {
+  color: #b7bfc8;
+}
+
+.user ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
 .userName::before {
   content: url("../img/icon-user.svg");
+}
+
+.userName:hover::before {
+  content: url("../img/icon-user-blue.svg");
 }
 
 .contactsLogin ul {
@@ -296,20 +445,40 @@ h2 {
   text-decoration: underline;
 }
 
-a.userName {
+.userName {
   color: black;
   font-size: 21px;
+}
+
+.userName:active {
+  color: #b2b2b2;
+}
+
+.userName:active::before {
+  content: url("../img/icon-user.svg");
 }
 
 .breadcrumbs ul {
   list-style-image: url("../img/icon-right-small.svg"); /* Не могу убрать отображение стрелку перед первым элементом, даже через :not(:first-child) */
 }
 
-.productListItem {
+.productListItem, .popularItem {
   border: #e5e5e5 1px solid;
   display: flex;
   flex-direction: column;
   width: 220px;
+}
+
+.popularItemsHeader {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.popularItemsHeader .btn {
+  width: 253px;
 }
 
 .productListItem p, .popularItem {
@@ -390,14 +559,14 @@ li:hover .buyBtns {
 
 .new:before {
   content:'';
-  position:absolute;
+  margin-left: auto;
   z-index:10;
   width:60px;
   height:60px;
   background:url(../img/new-flag.png) no-repeat 0 0;
 }
 
-.productList {
+.productList, .popularItemsList {
   display: flex;
   flex-wrap: wrap;
 }
@@ -407,7 +576,7 @@ li:hover .buyBtns {
 }
 
 main {
-  max-width: 960px;
+  max-width: 940px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -415,9 +584,17 @@ main {
 .siteNavList {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   vertical-align: center;
   padding: 10px;
+}
+
+.siteNavItem:hover {
+  background-color: #293449;
+}
+
+.siteNavItem a:active {
+  color: #868c95;
 }
 
 .breadcrumbs ul {
@@ -434,7 +611,7 @@ main {
 }
 
 nav {
-  max-width: 960px;
+  max-width: 940px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -450,17 +627,29 @@ nav {
   margin-left: auto;
   margin-right: auto;
   align-items: center;
+  max-width: 940px;
 }
 
 .headerTop {
-  max-width: 960px;
+  max-width: 940px;
   display: flex;
   flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
 }
 
 .catalogList {
   display: flex;
   flex-wrap: wrap;
+}
+
+.telBorder {
+  border: 3px solid #ffffff;
+  padding-top: 12px;
+  padding-right: 49px;
+  padding-bottom: 12px;
+  padding-left: 72px;
 }
 
 .bottomCatalog ul {
@@ -478,7 +667,7 @@ nav {
 
 .footerTop {
   display: flex;
-  max-width: 960px;
+  max-width: 940px;
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
@@ -503,7 +692,7 @@ nav {
 .footerBottom {
   display: flex;
   flex-wrap: wrap;
-  max-width: 960px;
+  max-width: 940px;
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
