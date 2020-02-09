@@ -177,6 +177,8 @@ h1 {
 
 .goToCart {
   background-color: #63a63e;
+  height: 100%;
+  margin: 0;
 }
 
 .goToCart:hover {
@@ -190,9 +192,12 @@ h1 {
 .contactsLogin {
   background-color: #f4f7f9;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-top: 46px;
-
+  padding-left: 53px;
+  width: 940px;
+  margin: auto;
+  height: 158px;
 }
 
 .address {
@@ -207,16 +212,39 @@ h1 {
 
 .tel::before {
   content: url("../img/icon-phone.svg");
+  padding-right: 42px;
 }
 
 .find {
   width: 260px;
+  height: 100%;
+}
+
+.telAddress {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginLink {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 59px;
+}
+
+.signUp {
+  margin-left: 10px;
 }
 
 .loginLink a {
   font-size: 21px;
   color: black;
   background-color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
   width: 121px;
   height: 45px; /* Почему не задаются размеры? */
 }
@@ -297,6 +325,27 @@ h2 {
   padding-bottom: 14px;
   border-radius: 2px;
   height: 38px;
+}
+
+.popularManufactureList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  align-items: center;
+}
+
+.popularManufactureItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 143px;
+  text-align: center;
+  border: 1px solid #e7e7e7;
+}
+
+.popularManufactureItem:hover {
+  box-shadow: 0 0 15px #293449;
 }
 
 .btn:hover {
@@ -426,11 +475,13 @@ h2 {
 .user ul {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .userName::before {
   content: url("../img/icon-user.svg");
+  padding-right: 15px;
 }
 
 .userName:hover::before {
@@ -439,6 +490,7 @@ h2 {
 
 .contactsLogin ul {
   list-style-type: none;
+  display: flex;
 }
 .contactsLogin ul a{
   color: #32425c;
@@ -466,7 +518,13 @@ h2 {
   border: #e5e5e5 1px solid;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 220px;
+  align-content: stretch;
+}
+
+.productListItem:hover, .popularItem:hover {
+  box-shadow: 0 0 15px #293449;
 }
 
 .popularItemsHeader {
@@ -516,8 +574,9 @@ li:hover img.itemCard {
 li:hover .buyBtns {
   display: flex;
   flex-wrap: wrap;
-  margin-right: 43px;
-  margin-left: 43px;
+  margin: auto;
+  justify-content: space-between;
+  flex-direction: column;
 
 }
 
@@ -539,31 +598,35 @@ li:hover .buyBtns {
 
 .buyBtn {
   background-color: #63a63e;
-  padding: 13px 45px 11px 19px;
+  height: 35px;
   border-radius: 2px;
   box-shadow: #367315 0 3px;
   color: white;
   font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 135px;
+  margin-bottom: 11px;
 }
 .buyBtn::before {
   content: url("../img/icon-cart.svg");
-  padding-right: 22px;
+  padding-right: 20px;
 }
 
 .bkmkBtn {
   border: #63a63e 3px solid;
   border-radius: 2px;
-  padding: 9px 27px 9px 30px;
+  height: 35px;
   color: #32425c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.new:before {
-  content:'';
-  margin-left: auto;
-  z-index:10;
-  width:60px;
-  height:60px;
-  background:url(../img/new-flag.png) no-repeat 0 0;
+.new {
+  background: url(../img/new-flag.png) no-repeat 0 0;
+  background-position: top right;
 }
 
 .productList, .popularItemsList {
@@ -585,11 +648,19 @@ main {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
-  vertical-align: center;
-  padding: 10px;
+  height: 55px;
+  padding: 0;
+  text-align: center;
 }
 
-.siteNavItem:hover {
+.siteNavList li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.siteNavList li:hover {
   background-color: #293449;
 }
 
@@ -618,6 +689,9 @@ nav {
 
 .siteNavItem {
   font-size: 17px;
+  height: 100%;
+  width: 100%;
+
 }
 
 .topLevel {
@@ -631,12 +705,11 @@ nav {
 }
 
 .headerTop {
-  max-width: 940px;
   display: flex;
   flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
+  background-color: #32425c;
   justify-content: space-around;
+
 }
 
 .catalogList {
@@ -645,11 +718,36 @@ nav {
 }
 
 .telBorder {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   border: 3px solid #ffffff;
-  padding-top: 12px;
-  padding-right: 49px;
-  padding-bottom: 12px;
-  padding-left: 72px;
+  height: 39px;
+  width: 264px;
+}
+
+.user {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userBorder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 13px 10px;
+  margin-bottom: -15px;
+}
+
+.containerContactsLogin {
+  margin: auto;
+  background-color: #f4f7f9;
+  padding-bottom: 60px;
+  height: 278px;
 }
 
 .bottomCatalog ul {
@@ -701,4 +799,46 @@ nav {
 .footerBottom ul {
   display: flex;
   flex-wrap: nowrap;
+}
+
+.btnCatalog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+  opacity: 0.5;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  height: 38px;
+  width: 135px;
+  border-radius: 2px;
+}
+
+.catalogList li:nth-child(1) {
+  background-color: #ffbf47;
+}
+
+.catalogList li:nth-child(2) {
+  background-color: #3bbce3;
+}
+
+.catalogList li:nth-child(3) {
+  background-color: #dc91d8;
+}
+
+.catalogList {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.catalogList li {
+  width: 300px;
+  height: 123px;
+  display: flex;
+  flex-wrap: wrap;
 }
