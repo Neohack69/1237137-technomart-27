@@ -332,6 +332,9 @@ h2 {
   flex-wrap: wrap;
   list-style-type: none;
   align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .popularManufactureItem {
@@ -342,6 +345,7 @@ h2 {
   height: 143px;
   text-align: center;
   border: 1px solid #e7e7e7;
+  margin-bottom: 20px;
 }
 
 .popularManufactureItem:hover {
@@ -360,12 +364,6 @@ h2 {
   background-color: #ba2732;
 }
 
-.footerTop {
-  background-color: #32425c;
-  font-size: 18px;
-  color: white;
-}
-
 .footerTop .logo {
   padding-top: 21px;
   padding-bottom: 21px;
@@ -379,10 +377,6 @@ h2 {
   color: white;
 }
 
-.footerBottom {
-  background-color: #293449;
-  color: white;
-}
 
 .footerBottom a {
   color: #ffd180;
@@ -668,6 +662,8 @@ li:hover .buyBtns {
 .productList, .popularItemsList {
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
+  justify-content: space-between;
 }
 
 .container {
@@ -675,7 +671,6 @@ li:hover .buyBtns {
 }
 
 main {
-  max-width: 940px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -802,21 +797,29 @@ nav {
 .footerTop {
   display: flex;
   max-width: 940px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-left: auto;
   margin-right: auto;
+  height: 193px;
+}
+
+.footerTopBg {
+  background-color: #32425c;
+  font-size: 18px;
+  color: white;
 }
 
 .footerTop ul {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: flex-end;
+  margin-right: 0;
+  align-items: flex-end;
 }
 
-.footerTop li {
-  padding-right: 10px;
+.footerBottomBg {
+  background-color: #293449;
+  color: white;
 }
 
 .userName a {
@@ -830,6 +833,12 @@ nav {
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
+}
+
+.rightSide {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .footerBottom ul {
@@ -885,4 +894,50 @@ nav {
   height: 123px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.service-container {
+  background-color: #f4f7f9;
+  width: 100%;
+}
+
+.service {
+  max-width: 940px;
+  margin: auto;
+  background-image: url("../img/delivery.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.catalog, .popularCatalog, .manufactureContainer {
+  max-width: 940px;
+  margin: auto;
+}
+
+.bottomCatalog ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.aboutColumns {
+  display: flex;
+  justify-content: space-between;
+  max-width: 940px;
+  margin: auto;
+  height: 536px;
+}
+
+.about .btn {
+  padding-left: 41px;
+  padding-right: 41px;
+}
+
+.map .btn {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+
 }
