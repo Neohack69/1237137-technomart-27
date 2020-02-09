@@ -348,6 +348,10 @@ h2 {
   box-shadow: 0 0 15px #293449;
 }
 
+.popularManufactureItem:active img{
+  opacity: 0.2;
+}
+
 .btn:hover {
   background-color: #ca2c37;
 }
@@ -525,10 +529,6 @@ h2 {
 
 .productListItem:hover, .popularItem:hover {
   box-shadow: 0 0 15px #293449;
-}
-
-.productListItem:active, .popularItem:active {
-  opacity: 0.5;
 }
 
 .popularItemsHeader {
