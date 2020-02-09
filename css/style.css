@@ -527,6 +527,10 @@ h2 {
   box-shadow: 0 0 15px #293449;
 }
 
+.productListItem:active, .popularItem:active {
+  opacity: 0.5;
+}
+
 .popularItemsHeader {
   display: flex;
   flex-wrap: nowrap;
@@ -565,6 +569,7 @@ h2 {
 
 .buyBtns {
   display: none;
+  font-family: Cuprum, Arial, sans-serif;
 }
 
 li:hover img.itemCard {
@@ -577,7 +582,7 @@ li:hover .buyBtns {
   margin: auto;
   justify-content: space-between;
   flex-direction: column;
-
+  font-family: Cuprum, Arial, sans-serif;
 }
 
 .slider ul {
@@ -609,9 +614,31 @@ li:hover .buyBtns {
   width: 135px;
   margin-bottom: 11px;
 }
+
 .buyBtn::before {
   content: url("../img/icon-cart.svg");
   padding-right: 20px;
+  opacity: 0.3;
+}
+
+.buyBtn:hover{
+  background-color: #5FBB2D;
+}
+
+.buyBtn:hover::before {
+  content: url("../img/icon-cart-white.svg");
+  padding-right: 20px;
+  opacity: 1;
+}
+
+.buyBtn:active {
+  background-color: #518534;
+}
+
+.buyBtn:active::before {
+  content: url("../img/icon-cart-white.svg");
+  padding-right: 20px;
+  opacity: 1;
 }
 
 .bkmkBtn {
@@ -622,6 +649,15 @@ li:hover .buyBtns {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.bkmkBtn:hover {
+  border-color: #32425C;
+}
+
+.bkmkBtn:active {
+  border-color: #D8D8D8;
+  color: #C4C4C4;
 }
 
 .new {
@@ -813,6 +849,14 @@ nav {
   height: 38px;
   width: 135px;
   border-radius: 2px;
+}
+
+.btnCatalog:hover {
+  opacity: 0.7;
+}
+
+.btnCatalog:active {
+  opacity: 1;
 }
 
 .catalogList li:nth-child(1) {
