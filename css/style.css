@@ -62,9 +62,6 @@ html {
   box-sizing: inherit;
 }
 
-span {
-  display: block;
-}
 body {
   font-family: Cuprum, Arial, sans-serif;
   font-size: 16px; /* временно */
@@ -123,11 +120,11 @@ h1 {
   box-shadow: #b52933 0 5px;
 }
 
-.logo:hover {
+.logo:hover, .leftSide a:hover {
   background-color: #ca2c37;
 }
 
-.logo:active {
+.logo:active, .leftSide a:active {
   background-color: #ba2732;
 }
 
@@ -330,6 +327,7 @@ h2 {
 .map p {
   font-family: PT Sans, Arial, sans-serif;
   font-size: 13px;
+
 }
 
 .about ul {
@@ -352,9 +350,13 @@ h2 {
 }
 
 
-.about *,
+.about *:not(li),
 .map * {
-  margin-bottom: 40px;
+  margin-bottom: 45px;
+}
+
+.about li {
+  margin-bottom: 19px;
 }
 
 .btn {
@@ -431,26 +433,28 @@ h2 {
   color: #ffd180;
 }
 
-.footerBottom li {
-  position: relative;
+.social {
+  display: inherit;
+}
 
-  width: 41px;
-  height: 41px;
-  margin: 5px;
-  padding-top: 10px;
-  padding-left: 10px; /* Не удается выровнять значки */
-
+.socialItem {
+  text-align: center;
+  background-color: #212A3A;
   border-radius: 50%;
-  background-color: #212a3a;
+  width: 42px;
+  height: 42px;
+  margin-left: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
-.footerBottom ul {
-  list-style-type: none;
+.socialItem img {
+  top: 12px;
+  left: 10px;
 }
 
-.footerBottom li {
-  font-size: 0;
-}
 
 .navYellow a {
   color: #ffd180;
@@ -625,8 +629,13 @@ h2 {
   align-items: center;
   flex-wrap: nowrap;
   justify-content: space-between;
-
+  background-color: #F9F5F0;
   text-align: center;
+  margin-top: 53px;
+  height: 89px;
+  padding-right: 24px;
+  padding-left: 30px;
+  margin-bottom: 20px;
 }
 
 .popularItemsHeader .btn {
@@ -651,13 +660,30 @@ h2 {
 }
 
 .redPrice {
-  height: 38px;
-  margin-top: auto;
+  position: relative;
+  width: 80px;
+  margin: 10px auto;
+  margin-bottom: 20px;
+  padding: 10px 30px;
 
   color: white;
-  background-image: url('../img/red-button.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+  background: #ee3643;
+  border-radius: 3px;
+  box-sizing: content-box;
+}
+
+.redPrice::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: -20px;
+
+  width: 0;
+  height: 0;
+
+  border: 20px solid white;
+  border-left-color: #ee3643;
 }
 
 .popularInCatalog ul,
@@ -692,42 +718,71 @@ li:hover .buyBtns {
 
 .bottomCatalog {
   display: flex;
-  flex-direction: column;
-
-  max-width: 940px;
+  margin-top: 20px;
+  color: white;
+  height: 266px;
 }
 
-.sliderContent p {
-  font-size: 18px;
+.slider {
+  width: 620px;
+  height: 266px;
+  background-image: url("../img/slider-1.jpg");
+  padding-left: 25px;
+  padding-right: 25px;
+}
 
-  margin-top: 0;
-  margin-left: 24px;
+.slider .btn {
+  height: 125px;
+  padding: 8px 50px;
+}
+
+.slider p {
+  margin-bottom: 0;
+}
+
+.sliderRight {
+  margin-left: 20px;
+}
+
+.catalogItemBottom {
+  padding: 0 25px;
+  height: 123px;
+  width: 300px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
+.catalogItem img, .catalogItemBottom img {
+  padding-top: 30px;
+}
+
+.catalogItemBottom:first-child {
+  background-color: #8ED78F;
+}
+
+.catalogItemBottom:last-child {
+  background-color: #FFC047;
 }
 
 .boldText {
   font-size: 36px;
   font-weight: bold;
-
-  margin-top: 26px;
-  margin-bottom: 0;
-  margin-left: 24px;
+  margin-top: 8px;
+  margin-bottom: 4px;
 }
 
-.sliderContent {
-  width: 620px;
-  height: 266px;
-}
-
-.slider ul:first-child {
-  color: white;
-  background-image: url('../img/slider-1.jpg');
-  background-repeat: no-repeat;
-}
-
-.slider ul:last-child {
-  color: white;
-  background-image: url('../img/slider-2.jpg');
-  background-repeat: no-repeat;
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 128px;
 }
 
 .buyBtn {
@@ -805,6 +860,7 @@ li:hover .buyBtns {
 .new {
   background: url(../img/new-flag.png) no-repeat 0 0;
   background-position: top right;
+  /* position relative */
 }
 
 .productList,
@@ -880,11 +936,7 @@ main fieldset {
   display: inline;
 }
 
-nav {
-  max-width: 940px;
-  margin-right: auto;
-  margin-left: auto;
-}
+
 
 .siteNavItem {
   font-size: 17px;
@@ -970,6 +1022,7 @@ nav {
   width: 300px;
   min-height: 123px;
   padding-left: 25px;
+  padding-right: 25px;
 
   color: white;
 }
@@ -986,6 +1039,10 @@ nav {
   height: 193px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.navYellow {
+  margin-top: -60px;
 }
 
 .footerTopBg {
@@ -1017,27 +1074,48 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
+  align-items: center;
   max-width: 940px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.developed {
+  display: inherit;
+}
+
+.developed p {
+  margin-left: 50px;
 }
 
 .rightSide {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  width: 660px;
 }
 
-.boldText {
-  font-size: 36px;
-  font-weight: bold;
+.leftSide a {
+  display: inline-block;
+  padding: 18px 41px 15px;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Cuprum", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ee3643;
+  border-bottom: 5px solid #b52933;
 }
 
+.rightSide .item {
+  margin-right: 60px;
+}
 
-.footerBottom ul {
-  display: flex;
-  flex-wrap: nowrap;
+.rightSide .item:last-child {
+  margin-right: 0;
 }
 
 .btnCatalog {
@@ -1064,6 +1142,7 @@ nav {
 .btnCatalog:active {
   background-color: rgba(0, 0, 0, .3);
 }
+
 
 .catalogList li:nth-child(1) {
   background-color: #ffbf47;
@@ -1140,10 +1219,34 @@ nav {
   font-size: 13px;
 }
 
-.service input[type=radio] {
+.service input[type=radio], .slider input[type=radio] {
   position: absolute;
 
   opacity: 0;
+}
+
+.slider-controls {
+  position: absolute;
+  width: 60px;
+  height: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 5px;
+  vertical-align: top;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#btn-1:checked ~ .slider-controls label[for=btn-1], #btn-2:checked ~ .slider-controls label[for=btn-2] {
+  background: #ee3643;
 }
 
 #button-1:checked ~ .service-toggle label[for=button-1],
@@ -1217,4 +1320,8 @@ nav {
   align-items: center;
   flex-wrap: nowrap;
   justify-content: center;
+}
+
+.about {
+  width: 524px;
 }
