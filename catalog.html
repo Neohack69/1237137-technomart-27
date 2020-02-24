@@ -82,35 +82,42 @@
             <p class="formHeader upperCase">Фильтр:</p>
             <fieldset class="costFieldset">
               <legend>Цена:</legend>
-              <input type="range" id="filter-cost" min="0" max="40000" step="500" value="40000" name="cost"
-                     onmouseup="myFunction()">
-              <label for="filter-cost" class="visuallyHidden">Диапазон стоимости</label>
-              <input type="text" value="0" id="minCost">
-              <label for="minCost" class="visuallyHidden">Минимальная стоимость</label>
-              <input type="text" value="40000" id="maxCost">
-              <label for="maxCost" class="visuallyHidden">Максимальная стоимость</label>
+              <div class="rangeControls">
+                <div class="scale">
+                  <div class="bar">
+                  </div>
+                </div>
+                <div class="toggle minToggle"></div>
+                <div class="toggle maxToggle"></div>
+              </div>
+              <div class="priceControls">
+                <input class="priceMin" id="priceMin" name="priceMin" type="text" value="0"><span>—</span>
+                <label for="priceMin"></label>
+                <input class="priceMax" id="priceMax" name="priceMax" type="text" value="30000">
+                <label for="priceMax"></label>
+              </div>
             </fieldset>
             <fieldset class="productionsFieldset">
               <legend>Производители:</legend>
               <ul>
                 <li>
-                  <input type="checkbox" name="bosch" id="filter-bosch" checked>
+                  <input checked class="checkBox" id="filter-bosch" name="bosch" type="checkbox">
                   <label for="filter-bosch">Bosch</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="interskol" id="filter-interskol">
+                  <input class="checkBox" id="filter-interskol" name="interskol" type="checkbox">
                   <label for="filter-interskol">Интерскол</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="makita" id="filter-makita" checked>
+                  <input checked class="checkBox" id="filter-makita" name="makita" type="checkbox">
                   <label for="filter-makita">Makita</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="dewalt" id="filter-dewalt">
+                  <input class="checkBox" id="filter-dewalt" name="dewalt" type="checkbox">
                   <label for="filter-dewalt">Dewalt</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="hitachi" id="filter-hitachi">
+                  <input class="checkBox" id="filter-hitachi" name="hitachi" type="checkbox">
                   <label for="filter-hitachi">Hitachi</label>
                 </li>
               </ul>
@@ -133,7 +140,7 @@
         </div>
         <div class="productTable">
           <div class="sort">
-            <p class="formHeader upperCase">Сортировка:</p>
+            <p class="upperCase">Сортировка:</p>
             <div class="sortBy">
               <a class="sortByItem upperCase" href="#">По цене</a>
               <a class="sortByItem upperCase" href="#">По типу</a>
@@ -153,7 +160,7 @@
                 <a href="#" class="buyBtn upperCase">Купить</a>
                 <a href="#" class="bkmkBtn upperCase">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>3000</p>
+              <p>Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;3000</p>
               <p class="lineTrough">22500 Р.</p>
               <p class="redPrice">15500 Р.</p>
             </li>
@@ -165,7 +172,7 @@
                 <a href="#" class="buyBtn upperCase">Купить</a>
                 <a href="#" class="bkmkBtn upperCase">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>6000</p>
+              <p>Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;6000</p>
               <p class="lineTrough">30500 Р.</p>
               <p class="redPrice">25500 Р.</p>
             </li>
@@ -177,7 +184,7 @@
                 <a href="#" class="buyBtn upperCase">Купить</a>
                 <a href="#" class="bkmkBtn upperCase">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>2000</p>
+              <p>Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;2000</p>
               <p class="redPrice">12500 Р.</p>
             </li>
             <li class="productListItem">
@@ -188,7 +195,7 @@
               <a href="#">
                 <img src="img/perforator_1.jpg" alt="Перфоратор BOSCH BGF 3000" class="itemCard">
               </a>
-              <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>3000</p>
+              <p>Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;3000</p>
               <p class="lineTrough">22500 Р.</p>
               <p class="redPrice">15500 Р.</p>
             </li>
@@ -200,7 +207,7 @@
                 <a href="#" class="buyBtn upperCase">Купить</a>
                 <a href="#" class="bkmkBtn upperCase">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>6000</p>
+              <p>Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;6000</p>
               <p class="lineTrough">30500 Р.</p>
               <p class="redPrice">25500 Р.</p>
             </li>
@@ -212,7 +219,7 @@
                 <a href="#" class="buyBtn upperCase">Купить</a>
                 <a href="#" class="bkmkBtn upperCase">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>2000</p>
+              <p>Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;2000</p>
               <p class="redPrice">12500 Р.</p>
             </li>
             <li class="productListItem new">
@@ -223,7 +230,7 @@
                 <a href="#" class="buyBtn upperCase">Купить</a>
                 <a href="#" class="bkmkBtn upperCase">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>3000</p>
+              <p>Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;3000</p>
               <p class="lineTrough">22500 Р.</p>
               <p class="redPrice">15500 Р.</p>
             </li>
@@ -235,7 +242,7 @@
                 <a href="#" class="buyBtn upperCase">Купить</a>
                 <a href="#" class="bkmkBtn upperCase">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>6000</p>
+              <p>Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;6000</p>
               <p class="lineTrough">30500 Р.</p>
               <p class="redPrice">25500 Р.</p>
             </li>
@@ -247,7 +254,7 @@
                 <a href="#" class="buyBtn upperCase">Купить</a>
                 <a href="#" class="bkmkBtn upperCase">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch <br>bfg</span>2000</p>
+              <p>Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;2000</p>
               <p class="redPrice">12500 Р.</p>
             </li>
           </ul>
@@ -314,9 +321,9 @@
             Все права защищены</p>
         </div>
         <div class="social">
-          <div class="socialItem"><img alt="" src="img/icon-vk.svg"></div>
-          <div class="socialItem"><img alt="" src="img/icon-fb.svg"></div>
-          <div class="socialItem"><img alt="" src="img/icon-insta.svg"></div>
+          <div class="socialItem"><a href="#"><img alt="" src="img/icon-vk.svg"></a></div>
+          <div class="socialItem"><a href="#"><img alt="" src="img/icon-fb.svg"></a></div>
+          <div class="socialItem"><a href="#"><img alt="" src="img/icon-insta.svg"></a></div>
         </div>
         <div class="developed">
           <p>Обратная связь: <br>
@@ -327,12 +334,5 @@
       </div>
     </div>
   </footer>
-  <script>
-    function myFunction() {
-      var x = document.getElementById("filter-cost").value;
-      document.getElementById("maxCost").value = x;
-      console.log(x);
-    }
-  </script>
   </body>
 </html>

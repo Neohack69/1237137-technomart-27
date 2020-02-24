@@ -189,7 +189,7 @@ h1 {
 }
 
 
-bookmarksCart {
+.bookmarksCart {
   height: 42px;
 }
 
@@ -733,6 +733,7 @@ li:hover img.itemCard {
 
 li:hover .buyBtns {
   font-family: Cuprum, Arial, sans-serif;
+  text-transform: uppercase;
 
   display: flex;
   flex-direction: column;
@@ -887,10 +888,13 @@ li:hover .buyBtns {
   border-color: #d8d8d8;
 }
 
-.new {
-  background: url(../img/new-flag.png) no-repeat 0 0;
-  background-position: top right;
-  /* position relative */
+.new:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("../img/new-flag.png");
+  background-repeat: no-repeat;
 }
 
 .productList,
@@ -1060,6 +1064,7 @@ main fieldset {
 
 .productionsFieldset ul {
   list-style-type: none;
+  padding: 0;
 }
 
 .footerTop {
@@ -1433,6 +1438,17 @@ main fieldset {
   color: #ee3643;
 }
 
+.sortByUp:active {
+  background-image: url("../img/icon-up-dir-red.svg");
+}
+
+.sortByDown:active {
+  background-image: url("../img/icon-up-dir-red.svg");
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
 
 .sortControl {
   display: flex;
@@ -1461,5 +1477,195 @@ main fieldset {
   width: 11px;
   height: 10px;
   margin: auto;
+}
+
+.checkBox {
+  display: none;
+}
+
+.checkBox + label {
+  /*background:url('../img/checkbox-off.svg') no-repeat;
+  height: 23px;
+  width: 23px;
+  display:inline-block;*/
+  background: url('../img/checkbox-off.svg') no-repeat;
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 35px;
+  line-height: 23px;
+  color: #000;
+  cursor: pointer;
+}
+
+.checkBox:checked + label {
+  background: url('../img/checkbox-on.svg') no-repeat;
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 35px;
+  line-height: 23px;
+  color: #000;
+  cursor: pointer;
+}
+
+.checkBox label {
+  margin-left: 50px;
+}
+
+.sideForm {
+  text-transform: uppercase;
+  min-width: 226px;
+}
+
+.formHeader {
+  width: 220px;
+  height: 38px;
+  background-color: #F7F3EC;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding-left: 18px;
+  border-radius: 5px;
+}
+
+.costFieldset {
+  margin-top: 13px;
+  padding-left: 0;
+}
+
+.rangeControls {
+  position: relative;
+  height: 80px;
+  margin: 14px 0 10px;
+  padding: 0 30px;
+  overflow: hidden;
+  background: #f7f3ec;
+  border-radius: 3px;
+}
+
+.scale {
+  height: 2px;
+  margin-top: 39px;
+  background: #d7dcde;
+}
+
+.bar {
+  width: 87%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.rangeControls .minToggle {
+  left: 21px;
+}
+
+.rangeControls .toggle {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 4px;
+  height: 4px;
+  border: 8px solid #fff;
+  background: #ababab;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.rangeControls .maxToggle {
+  left: 70%;
+}
+
+.priceControls {
+  margin-bottom: 26px;
+  color: #000;
+}
+
+.sideForm input[type=text] {
+  width: 85px;
+  padding: 8px 2px 10px 8px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 18px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  text-align: center;
+  background-color: #f7f3ec;
+  border: none;
+  border-radius: 3px;
+  margin: 0;
+}
+
+.priceMax {
+  margin-left: 9px;
+}
+
+
+.productionsFieldset {
+  padding-left: 0;
+}
+
+
+.productionsFieldset input[type=radio] {
+  display: none;
+  margin: 10px;
+}
+
+.productionsFieldset input[type=radio] + label {
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 35px;
+  line-height: 26px;
+  color: #000;
+  cursor: pointer;
+}
+
+.productionsFieldset input[type=radio]:checked + label {
+  background-image: url("../img/radio-on.svg");
+  background-repeat: no-repeat;
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 35px;
+  line-height: 26px;
+  color: #000;
+  cursor: pointer;
+}
+
+button[type=submit] {
+  width: 140px;
+  height: 38px;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  background-color: white;
+}
+
+.pageSelect a {
+  font-family: "PT Sans", Arial, sans-serif;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  background-color: white;
+  padding: 13px 15px;
+  color: black;
+}
+
+.pageSelect a:last-child {
+  padding: 13px 31px;
+}
+
+.pageSelect a:first-child {
+  background-color: #ee3643;
+  border: 1px solid #ee3643;
+}
+
+.pageSelect a:not(:first-child):hover {
+  border: 1px solid #bdc6ca;
+}
+
+.pageSelect a:not(:first-child):active {
+  border: 1px solid #ee3643;
 }
 
