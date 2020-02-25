@@ -75,7 +75,7 @@ a {
 }
 
 h1 {
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 16px;
   font-style: italic;
 
@@ -117,6 +117,10 @@ h1 {
 
   background-color: #ee3643;
   box-shadow: #b52933 0 5px;
+}
+
+.topCatalog {
+  padding-top: 59px;
 }
 
 .logo:hover,
@@ -331,7 +335,7 @@ h1 {
 }
 
 h2 {
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 30px;
   font-style: normal;
 
@@ -344,6 +348,8 @@ h2 {
 .map p {
   font-family: PT Sans, Arial, sans-serif;
   font-size: 13px;
+  line-height: 24px;
+  padding-bottom: 10px;
 }
 
 .about ul {
@@ -365,11 +371,6 @@ h2 {
   background: #fb565a;
 }
 
-
-.about *:not(li),
-.map * {
-  margin-bottom: 45px;
-}
 
 .about li {
   margin-bottom: 19px;
@@ -674,9 +675,10 @@ h2 {
 
 .productListItem img,
 .popularItem img {
-  width: 218px;
-  height: 170px;
+  width: 90%;
+  height: 90%;
   margin: 0;
+  margin-top: 5px;
 }
 
 .productListItem p,
@@ -691,7 +693,7 @@ h2 {
   justify-content: space-between;
 
   height: 89px;
-  margin-top: 53px;
+
   margin-bottom: 20px;
   padding-right: 24px;
   padding-left: 30px;
@@ -976,20 +978,21 @@ main fieldset {
 .siteNavList {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: center;
 
   height: 55px;
-  padding: 0;
+
 
   text-align: center;
+  padding: 0;
+
 }
 
 .siteNavList li {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  width: 100%;
+  padding: 0 30px;
 }
 
 .siteNavList li:hover {
@@ -1280,31 +1283,43 @@ main fieldset {
   display: flex;
   align-items: center;
 
-  padding-top: 77px;
-  padding-bottom: 99px;
+  height: 300px;
 
-  background-image: url('../img/delivery.png');
-  background-repeat: no-repeat;
-  background-position: right;
+
 }
 
 .smallText {
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
+  line-height: 23px;
 }
 
 .serviceBlockRight {
   font-size: 36px;
-
-  flex-grow: 2;
-
+  height: 359px;
   margin-right: 0;
   margin-left: 80px;
+  display: flex;
+
+  width: 100%;
+  background-image: url('../img/delivery.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.serviceBtnDelivery {
+  padding-top: 80px;
+}
+
+.serviceBtnDelivery span {
+  text-transform: uppercase;
+  color: #32425C;
 }
 
 .serviceBlockRight p {
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
+  line-height: 24px;
 }
 
 .service input[type=radio],
