@@ -1425,7 +1425,10 @@ main fieldset {
   font-family: PT Sans, Arial, sans-serif;
   font-size: 13px;
   line-height: 26px;
+}
 
+.catalogBgContainer {
+  margin-top: 60px;
   padding-top: 61px;
   padding-bottom: 76px;
   background-color: #f2f6f8;
