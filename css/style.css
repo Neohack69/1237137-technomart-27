@@ -78,6 +78,7 @@ h1 {
   font-family: 'Cuprum', Arial, sans-serif;
   font-size: 16px;
   font-style: italic;
+  line-height: 23px;
 
   color: #ee3643;
 }
@@ -229,16 +230,21 @@ h1 {
   justify-content: space-between;
 
   width: 940px;
-  height: 158px;
-  margin: auto;
+  height: 142px;
   padding-top: 46px;
-  padding-left: 53px;
 
   background-color: #f4f7f9;
 }
 
+.contactsLogin h1 {
+  margin-top: 0;
+  padding-left: 50px;
+}
+
 .address {
   font-size: 14px;
+
+  margin-top: -10px;
 
   color: #32425c;
 }
@@ -259,18 +265,17 @@ h1 {
   display: flex;
   align-items: center;
 
-  min-width: 270px;
+  width: 270px;
   height: 100%;
-  padding: 0 10px;
+  padding: 0 20px;
 
   text-align: center;
 }
 
 .telAddress {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
+  width: 403px;
+
+  text-align: center;
 }
 
 .loginLink {
@@ -322,6 +327,8 @@ h1 {
 }
 
 .siteNav {
+  margin-top: 0;
+
   background-color: #32425c;
   box-shadow: #293449 0 5px;
 }
@@ -337,6 +344,7 @@ h1 {
 h2 {
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 30px;
+  font-weight: normal;
   font-style: normal;
 
   text-transform: uppercase;
@@ -349,6 +357,7 @@ h2 {
   font-family: PT Sans, Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
+
   padding-bottom: 10px;
 }
 
@@ -693,7 +702,7 @@ h2 {
   justify-content: space-between;
 
   height: 89px;
-
+  margin-top: 53px;
   margin-bottom: 20px;
   padding-right: 24px;
   padding-left: 30px;
@@ -796,6 +805,7 @@ li:hover .buyBtns {
 .slider {
   width: 620px;
   height: 266px;
+  padding-top: 20px;
   padding-right: 25px;
   padding-left: 25px;
 
@@ -808,6 +818,7 @@ li:hover .buyBtns {
 }
 
 .slider p {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -828,6 +839,10 @@ li:hover .buyBtns {
   height: 123px;
   margin-bottom: 20px;
   padding: 0 25px;
+}
+
+.catalogItemBottom p {
+  margin-bottom: 15px;
 }
 
 .catalogItem img,
@@ -981,17 +996,16 @@ main fieldset {
   justify-content: center;
 
   height: 55px;
-
-
-  text-align: center;
   padding: 0;
 
+  text-align: center;
 }
 
 .siteNavList li {
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 0 30px;
 }
 
@@ -1059,6 +1073,7 @@ main fieldset {
 
   width: 264px;
   height: 39px;
+  margin-top: 0;
 
   border: 3px solid #fff;
 }
@@ -1084,8 +1099,6 @@ main fieldset {
 
 .containerContactsLogin {
   height: 278px;
-  margin: auto;
-  padding-bottom: 60px;
 
   background-color: #f4f7f9;
 }
@@ -1108,6 +1121,10 @@ main fieldset {
   padding-left: 25px;
 
   color: white;
+}
+
+.catalogItem p {
+  margin-bottom: 15px;
 }
 
 .productionsFieldset ul {
@@ -1284,8 +1301,6 @@ main fieldset {
   align-items: center;
 
   height: 300px;
-
-
 }
 
 .smallText {
@@ -1296,12 +1311,14 @@ main fieldset {
 
 .serviceBlockRight {
   font-size: 36px;
-  height: 359px;
-  margin-right: 0;
-  margin-left: 80px;
+
   display: flex;
 
   width: 100%;
+  height: 359px;
+  margin-right: 0;
+  margin-left: 80px;
+
   background-image: url('../img/delivery.png');
   background-repeat: no-repeat;
   background-position: right center;
@@ -1313,7 +1330,8 @@ main fieldset {
 
 .serviceBtnDelivery span {
   text-transform: uppercase;
-  color: #32425C;
+
+  color: #32425c;
 }
 
 .serviceBlockRight p {
@@ -1446,6 +1464,7 @@ main fieldset {
   margin-top: 60px;
   padding-top: 61px;
   padding-bottom: 76px;
+
   background-color: #f2f6f8;
 }
 
@@ -1802,4 +1821,9 @@ button[type=submit] {
 
 .pageSelect a:not(:first-child):active {
   border: 1px solid #ee3643;
+}
+
+
+.manufactureContainer .popularItemsHeader {
+  margin-top: -15px;
 }
