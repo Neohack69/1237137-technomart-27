@@ -75,12 +75,12 @@ a {
 }
 
 h1 {
-  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 16px;
-  font-style: italic;
   line-height: 23px;
-
-  color: #ee3643;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Cuprum", "Arial", sans-serif;
+  color: #ef5c67;
 }
 
 ::placeholder {
@@ -120,6 +120,11 @@ h1 {
   box-shadow: #b52933 0 5px;
 }
 
+.logo img {
+  width: 108px;
+  height: 18px;
+}
+
 .topCatalog {
   padding-top: 59px;
 }
@@ -146,6 +151,11 @@ h1 {
   color: #d4d6db;
   border: none;
   background-color: transparent;
+  padding-left: 50px;
+}
+
+.find form {
+  position: relative;
 }
 
 .find:hover {
@@ -166,8 +176,11 @@ h1 {
   background-color: white;
 }
 
-.find input[type=search]:focus + label {
-  background: url(../img/icon-search-red.svg) no-repeat;
+
+/* Далее проблема с изменением цвета лупы */
+.find form:focus .searchLabel {
+  background: url("../img/icon-search-red.svg") no-repeat;
+  z-index: 50;
 }
 
 .bookmarksCart a:hover {
@@ -237,15 +250,15 @@ h1 {
 }
 
 .contactsLogin h1 {
-  margin-top: 0;
-  padding-left: 50px;
+  width: 247px;
+  float: left;
+  margin: 3px 0 40px 52px;
 }
 
 .address {
   font-size: 14px;
-
-  margin-top: -10px;
-
+  padding-left: 7px;
+  margin-top: 7px;
   color: #32425c;
 }
 
@@ -253,12 +266,20 @@ h1 {
   font-size: 21px;
 
   color: #ee3643;
+
+  position: relative;
+  display: block;
+  padding-left: 75px;
 }
 
 .tel::before {
-  padding-right: 42px;
+
 
   content: url('../img/icon-phone.svg');
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  left: 15px
 }
 
 .find {
@@ -267,22 +288,24 @@ h1 {
 
   width: 270px;
   height: 100%;
-  padding: 0 20px;
+
 
   text-align: center;
 }
 
 .telAddress {
-  width: 403px;
 
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  margin-left: -50px;
 }
 
 .loginLink {
   display: flex;
   justify-content: space-between;
-
-  margin-left: 59px;
 }
 
 .signUp {
@@ -297,8 +320,9 @@ h1 {
   flex-wrap: nowrap;
   justify-content: center;
 
-  width: 121px;
-  height: 45px; /* Почему не задаются размеры? */
+  padding-right: 25px;
+  padding-left: 25px;
+  height: 45px;
 
   color: black;
   background-color: white;
@@ -306,6 +330,7 @@ h1 {
 
 .login::before {
   content: url('../img/icon-login.svg');
+  padding-right: 16px;
 }
 
 .loginLink a:hover {
@@ -407,6 +432,7 @@ h2 {
 
   margin: 0;
   padding: 0;
+  padding-bottom: 68px;
 
   list-style-type: none;
 }
@@ -723,6 +749,7 @@ h2 {
   font-weight: bold;
 
   text-align: center;
+  position: relative;
 }
 
 .lineTrough {
@@ -810,6 +837,7 @@ li:hover .buyBtns {
   padding-left: 25px;
 
   background-image: url('../img/slider-1.jpg');
+  position: relative;
 }
 
 .slider .btn {
@@ -950,7 +978,8 @@ li:hover .buyBtns {
   position: absolute;
   top: 0;
   right: 0;
-
+  width: 60px;
+  height: 59px;
   content: '';
 
   background-image: url('../img/new-flag.png');
@@ -1067,13 +1096,12 @@ main fieldset {
 }
 
 .telBorder {
+
+  width: 268px;
+  height: 45px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
 
-  width: 264px;
-  height: 39px;
-  margin-top: 0;
 
   border: 3px solid #fff;
 }
@@ -1121,6 +1149,7 @@ main fieldset {
   padding-left: 25px;
 
   color: white;
+  position: relative;
 }
 
 .catalogItem p {
@@ -1293,7 +1322,7 @@ main fieldset {
   max-width: 940px;
   min-height: 522px;
   margin: auto;
-  padding-top: 68px;
+  padding-top: 37px;
 }
 
 .serviceBtns {
@@ -1319,13 +1348,15 @@ main fieldset {
   margin-right: 0;
   margin-left: 80px;
 
-  background-image: url('../img/delivery.png');
-  background-repeat: no-repeat;
-  background-position: right center;
+
 }
 
 .serviceBtnDelivery {
   padding-top: 80px;
+  background-image: url('../img/delivery.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  width: 100%;
 }
 
 .serviceBtnDelivery span {
@@ -1348,13 +1379,14 @@ main fieldset {
 }
 
 .slider-controls {
-  position: absolute;
+  position: center;
 
   width: 60px;
   height: 10px;
   margin-bottom: 10px;
-
+  margin-top: auto;
   text-align: center;
+  left: auto;
 }
 
 .slider-controls label {
@@ -1363,7 +1395,8 @@ main fieldset {
   width: 6px;
   height: 6px;
   margin: 0 5px;
-
+  position: center;
+  left: 5px;
   cursor: pointer;
   vertical-align: top;
 
@@ -1396,7 +1429,7 @@ main fieldset {
 
   display: block;
 
-  width: 218px;
+  width: 240px;
   padding: 13px 0 16px 22px;
 
   cursor: pointer;
@@ -1436,6 +1469,7 @@ main fieldset {
   max-width: 940px;
   height: 536px;
   margin: auto;
+  padding-top: 50px;
 }
 
 .about .btn {
@@ -1487,6 +1521,8 @@ main fieldset {
 
   opacity: .3;
   background: url(../img/icon-search.svg) no-repeat;
+
+  position: absolute;
 }
 
 .breadcrumbs {
@@ -1715,7 +1751,7 @@ main fieldset {
   color: #000;
 }
 
-.sideForm input[type=text] {
+.side input[type=text] {
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 17px;
   font-weight: 400;
@@ -1827,3 +1863,5 @@ button[type=submit] {
 .manufactureContainer .popularItemsHeader {
   margin-top: -15px;
 }
+
+
