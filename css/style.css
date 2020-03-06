@@ -386,8 +386,15 @@ h2 {
   padding-bottom: 10px;
 }
 
+.map img {
+  padding-top: 9px;
+  padding-bottom: 34px;
+}
+
 .about ul {
   list-style-type: none;
+  padding-bottom: 9px;
+  margin-top: -5px;
 }
 
 .about li:before {
@@ -407,7 +414,7 @@ h2 {
 
 
 .about li {
-  margin-bottom: 19px;
+  margin-bottom: 21px;
 }
 
 .btn {
@@ -487,6 +494,7 @@ h2 {
 
 .social {
   display: inherit;
+  padding-left: 155px;
 }
 
 .socialItem {
@@ -1173,7 +1181,7 @@ main fieldset {
 }
 
 .navYellow {
-  margin-top: -60px;
+  margin-top: -70px;
 }
 
 .footerTopBg {
@@ -1205,19 +1213,18 @@ main fieldset {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
 
-  max-width: 940px;
-  margin-right: auto;
-  margin-left: auto;
+
+  padding-top: 20px;
 }
 
 .developed {
   display: inherit;
+  padding-left: 70px;
 }
 
 .developed p {
-  margin-left: 50px;
+  margin-left: 48px;
 }
 
 .rightSide {
@@ -1226,6 +1233,11 @@ main fieldset {
   justify-content: flex-end;
 
   width: 660px;
+}
+
+.rightSide nav {
+  padding-top: 20px;
+  padding-bottom: 0;
 }
 
 .leftSide a {
@@ -1237,7 +1249,10 @@ main fieldset {
 
   display: inline-block;
 
-  padding: 18px 41px 15px;
+  padding-top: 18px;
+  padding-right: 41px;
+  padding-left: 41px;
+  padding-bottom: 15px;
 
   text-decoration: none;
   text-transform: uppercase;
@@ -1245,6 +1260,11 @@ main fieldset {
   color: #fff;
   border-bottom: 5px solid #b52933;
   background-color: #ee3643;
+}
+
+.leftSide p {
+  padding-top: 10px;
+  line-height: 24px;
 }
 
 .rightSide .item {
@@ -1369,6 +1389,7 @@ main fieldset {
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
+  margin-top: 25px;
 }
 
 .service input[type=radio],
@@ -1473,8 +1494,10 @@ main fieldset {
 }
 
 .about .btn {
-  padding-right: 41px;
+  padding-right: 40px;
   padding-left: 41px;
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
 .map .btn {
@@ -1482,6 +1505,8 @@ main fieldset {
   align-items: center;
   flex-wrap: nowrap;
   justify-content: center;
+
+  height: 38px;
 }
 
 .about {
