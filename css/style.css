@@ -1043,8 +1043,11 @@ li:hover .buyBtns {
 .popularItemsList {
   display: flex;
   flex-wrap: wrap;
-  width: 700px;
   padding: 0;
+}
+
+.productList {
+  width: 700px;
 }
 
 .container {
