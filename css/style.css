@@ -178,9 +178,9 @@ h1 {
 
 
 /* Далее проблема с изменением цвета лупы */
-.find form:focus .searchLabel {
+.find input:focus + .searchLabel {
   background: url("../img/icon-search-red.svg") no-repeat;
-  z-index: 50;
+  opacity: 1;
 }
 
 .bookmarksCart a:hover {
@@ -459,11 +459,21 @@ h2 {
 }
 
 .popularManufactureItem:hover {
-  box-shadow: 0 0 15px #293449;
+  box-shadow: 0 10px 25px rgba(41, 52, 73, .5);
 }
 
 .popularManufactureItem:active img {
-  opacity: .2;
+  box-shadow: 0 4px 10px rgba(41, 52, 73, .5);
+  opacity: .3;
+}
+
+.item a:hover {
+  text-decoration: underline;
+}
+
+.item a:active {
+  opacity: .3;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -510,6 +520,10 @@ h2 {
 
   border-radius: 50%;
   background-color: #212a3a;
+}
+
+.socialItem:hover {
+  background-color: #EE3643;
 }
 
 .socialItem img {
@@ -598,10 +612,8 @@ h2 {
 .logout {
   background-image: url('../img/icon-logout.svg');
   background-repeat: no-repeat;
-}
-
-.logout {
   color: transparent;
+  padding-right: 10px;
 }
 
 .logout:hover {
@@ -636,6 +648,10 @@ h2 {
   justify-content: space-around;
 
   width: 100%;
+
+  padding-left: 0;
+  padding-right: 40px;
+  padding-top: 13px;
 }
 
 .userName::before {
@@ -664,6 +680,7 @@ h2 {
   font-size: 21px;
 
   color: black;
+  padding-right: 39px;
 }
 
 .userName:active {
@@ -713,7 +730,7 @@ h2 {
 .popularItem:hover {
   z-index: 1;
 
-  box-shadow: 0 0 15px #293449;
+  box-shadow: 0 0 10px #aeb2ba;
 }
 
 .productListItem img,
@@ -1114,13 +1131,6 @@ main fieldset {
   border: 3px solid #fff;
 }
 
-.user {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .userBorder {
   display: flex;
   align-items: center;
@@ -1225,6 +1235,15 @@ main fieldset {
 
 .developed p {
   margin-left: 48px;
+}
+
+.developed a:hover {
+  text-decoration: underline;
+}
+
+.developed a:active {
+  text-decoration: none;
+  color: #EE3643;
 }
 
 .rightSide {
