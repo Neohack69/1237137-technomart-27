@@ -234,7 +234,7 @@ fieldset {
   width: 150px;
   height: 42px;
 
-  background-color: #63a63e;
+  background-color: #63A63E;
 }
 
 .goToCart a:hover {
@@ -336,7 +336,7 @@ fieldset {
 }
 
 .login::before {
-  content: url('../img/icon-login.svg');
+  content: url('../img/icon-logout.svg');
   padding-right: 16px;
 }
 
@@ -345,7 +345,7 @@ fieldset {
 }
 
 .login:hover::before {
-  content: url('../img/icon-login-blue.svg');
+  content: url('../img/icon-logout-blue.svg');
 
   opacity: 1;
 }
@@ -527,6 +527,8 @@ h2 {
 
   border-radius: 50%;
   background-color: #212a3a;
+
+  padding-top: 4px;
 }
 
 .socialItem:hover {
@@ -734,16 +736,18 @@ h2 {
 .productListItem,
 .popularItem {
   display: flex;
-  align-content: stretch;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
 
   width: 220px;
+  min-height: 317px;
   margin-right: 20px;
   margin-bottom: 13px;
-  margin-top: 5px;
+
 
   border: #e5e5e5 1px solid;
+
+  position: relative;
 }
 
 .productListItem:nth-child(3n) {
@@ -763,15 +767,9 @@ h2 {
 
 .productListItem img,
 .popularItem img {
-  width: 90%;
-  height: 90%;
-  margin: 0;
-  margin-top: 5px;
-}
 
-.productListItem p,
-.popularItem p {
-  margin-top: 0;
+
+  margin-top: 5px;
 }
 
 .popularItemsHeader {
@@ -800,17 +798,24 @@ h2 {
   font-family: PT Sans, Arial, sans-serif;
   font-size: 18px;
   font-weight: bold;
+  line-height: 20px;
 
   text-align: center;
-  position: relative;
 }
 
 .lineTrough {
-  margin-top: auto;
+
+  margin-top: 10px;
+  margin-bottom: 8px;
 
   text-decoration: line-through;
 
   color: #999;
+}
+
+.itemHeader {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .redPrice {
@@ -818,9 +823,11 @@ h2 {
 
   box-sizing: content-box;
   width: 80px;
-  margin: 10px auto;
-  margin-bottom: 20px;
+
   padding: 10px 30px;
+  margin-top: auto;
+  margin-left: 7px;
+
 
   color: white;
   border-radius: 3px;
@@ -850,6 +857,7 @@ h2 {
   font-family: Cuprum, Arial, sans-serif;
 
   display: none;
+  height: 179px;
 }
 
 li:hover img.itemCard {
@@ -858,14 +866,11 @@ li:hover img.itemCard {
 
 li:hover .buyBtns {
   font-family: Cuprum, Arial, sans-serif;
-
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
 
-  margin: auto;
-
+  padding-top: 44px;
   text-transform: uppercase;
 }
 
@@ -1046,8 +1051,13 @@ li:hover .buyBtns {
   padding: 0;
 }
 
+.popularItemsList {
+  margin-bottom: 25px;
+}
+
 .productList {
   width: 700px;
+  margin-top: 20px;
 }
 
 .container {
@@ -1451,14 +1461,15 @@ main fieldset {
 }
 
 .slider-controls {
-  position: center;
+  position: absolute;
 
   width: 60px;
   height: 10px;
   margin-bottom: 10px;
   margin-top: auto;
   text-align: center;
-  left: auto;
+  left: 50%;
+  margin-left: -30px;
 }
 
 .slider-controls label {
@@ -1467,7 +1478,6 @@ main fieldset {
   width: 6px;
   height: 6px;
   margin: 0 5px;
-  position: center;
   left: 5px;
   cursor: pointer;
   vertical-align: top;
@@ -1475,6 +1485,8 @@ main fieldset {
   border: 2px solid #fff;
   border-radius: 50%;
   background: #fff;
+
+  box-sizing: content-box;
 }
 
 #btn-1:checked ~ .slider-controls label[for=btn-1],
@@ -1582,7 +1594,7 @@ main fieldset {
   width: 150px;
   height: 100%;
 
-  background-color: red;
+  background-color: #EE3643;
 }
 
 .searchLabel {
@@ -1641,8 +1653,14 @@ main fieldset {
   color: #c5c5c5;
 }
 
+
 .sortBy a:not(.sortByUp):not(.sortByDown) {
   border-bottom: 1px dashed #ee3643;
+}
+
+.sortBy a:first-child {
+  border-bottom: none !important;
+  color: #ee3643;
 }
 
 .sortBy a:not(.sortByUp):not(.sortByDown):hover {
@@ -1691,8 +1709,8 @@ main fieldset {
   height: 10px;
   margin: auto;
   margin-right: 20px;
-  opacity: .3;
-  background-image: url('../img/icon-up-dir.svg');
+  opacity: 1;
+  background-image: url('../img/icon-up-dir-red.svg');
   background-repeat: no-repeat;
 }
 
@@ -1729,6 +1747,8 @@ main fieldset {
 
   color: #000;
   background: url('../img/checkbox-off.svg') no-repeat;
+
+  opacity: .8;
 }
 
 .checkBox:checked + label {
@@ -1745,6 +1765,11 @@ main fieldset {
 
   color: #000;
   background: url('../img/checkbox-on.svg') no-repeat;
+  opacity: .8;
+}
+
+.checkBox:checked + label:hover, .checkBox + label:hover {
+  opacity: 1;
 }
 
 .checkBox label {
@@ -1883,6 +1908,8 @@ main fieldset {
   color: #000;
   background-image: url('../img/radio-off.svg');
   background-repeat: no-repeat;
+
+  opacity: .8;
 }
 
 .productionsFieldset input[type=radio]:checked + label {
@@ -1900,6 +1927,12 @@ main fieldset {
   color: #000;
   background-image: url('../img/radio-on.svg');
   background-repeat: no-repeat;
+
+  opacity: .8;
+}
+
+.productionsFieldset input[type=radio]:checked + label:hover, .productionsFieldset input[type=radio] + label:hover {
+  opacity: 1;
 }
 
 button[type=submit] {
@@ -1913,6 +1946,7 @@ button[type=submit] {
   font-size: 13px;
   line-height: 18px;
   margin-top: 32px;
+  cursor: pointer;
 }
 
 .pageSelect {
@@ -1955,7 +1989,7 @@ button[type=submit] {
   margin-top: -15px;
 }
 
-.priceControls input[type=text] {
+.priceControls input[type=number] {
   width: 95px;
   padding-top: 8px;
   padding-bottom: 10px;
@@ -1984,3 +2018,5 @@ button[type=submit] {
   width: 10px;
   height: 2px;
 }
+
+
