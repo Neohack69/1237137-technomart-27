@@ -14,9 +14,9 @@
           <a href="#" class="logo">
             <img src="img/logo-technomart.svg" alt="Техномарт"></a>
           <div class="find">
-            <form action="https://echo.htmlacademy.ru">
-              <label class="searchLabel" for="search"></label>
+            <form action="https://echo.htmlacademy.ru" method="post">
               <input type="search" id="search" placeholder="Поиск:" name="searchText">
+              <label class="searchLabel" for="search"></label>
             </form>
           </div>
           <div class="bookmarksCart">
@@ -30,8 +30,8 @@
       </div>
     </div>
     <div class="containerContactsLogin">
-      <div class="contactsLogin">
-        <h1>Интернет-магазин <br>строительных материалов и инструментов для ремонта</h1>
+      <div class="contactsLogin container">
+        <h1>Интернет-магазин строительных&nbsp;материалов и&nbsp;инструментов&nbsp;для&nbsp;ремонта</h1>
         <div class="telAddress">
           <div class="telBorder">
             <a href="tel:+78125550555" class="tel">+7 (812) 555-05-55</a>
@@ -41,7 +41,7 @@
         <div class="user">
           <div class="userBorder">
             <a href="#" class="userName">Paвшан Джамшутович</a>
-            <a href="#" class="logout">Выход</a>
+            <a class="logout" href="#">w</a>
           </div>
           <ul>
             <li class="shoppingHistory"><a href="#">Мои заказы</a></li>
@@ -75,8 +75,10 @@
           <li><a href="">Перфораторы</a></li>
         </ul>
       </div>
-      <h2>Перфораторы</h2>
-      <div class="flexContainer">
+      <div class="catalogName container">
+        <h2>Перфораторы</h2>
+      </div>
+      <div class="flexContainer container">
         <div class="sideForm">
           <form action="https://echo.htmlacademy.ru" method="post">
             <p class="formHeader upperCase">Фильтр:</p>
@@ -91,10 +93,10 @@
                 <div class="toggle maxToggle"></div>
               </div>
               <div class="priceControls">
-                <input class="priceMin" id="priceMin" name="priceMin" type="text" value="0"><span>—</span>
-                <label for="priceMin"></label>
-                <input class="priceMax" id="priceMax" name="priceMax" type="text" value="30000">
-                <label for="priceMax"></label>
+                <input class="priceMin" id="priceMin" name="priceMin" type="number" value="0">
+                <img alt="-" src="img/line.png">
+                <input class="priceMax" id="priceMax" name="priceMax" type="number" value="30000">
+
               </div>
             </fieldset>
             <fieldset class="productionsFieldset">
@@ -135,7 +137,7 @@
                 </li>
               </ul>
             </fieldset>
-            <button type="submit">Показать</button>
+            <button class="upperCase" type="submit">Показать</button>
           </form>
         </div>
         <div class="productTable">
@@ -160,7 +162,7 @@
                 <a href="#" class="buyBtn upperCase">Купить</a>
                 <a href="#" class="bkmkBtn upperCase">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;3000</p>
+              <p class="itemHeader">Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;3000</p>
               <p class="lineTrough">22500 Р.</p>
               <p class="redPrice">15500 Р.</p>
             </li>
@@ -172,7 +174,7 @@
                 <a href="#" class="buyBtn upperCase">Купить</a>
                 <a href="#" class="bkmkBtn upperCase">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;6000</p>
+              <p class="itemHeader">Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;6000</p>
               <p class="lineTrough">30500 Р.</p>
               <p class="redPrice">25500 Р.</p>
             </li>
@@ -184,7 +186,7 @@
                 <a href="#" class="buyBtn upperCase">Купить</a>
                 <a href="#" class="bkmkBtn upperCase">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;2000</p>
+              <p class="itemHeader">Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;2000</p>
               <p class="redPrice">12500 Р.</p>
             </li>
             <li class="productListItem">
@@ -195,7 +197,7 @@
               <a href="#">
                 <img src="img/perforator_1.jpg" alt="Перфоратор BOSCH BGF 3000" class="itemCard">
               </a>
-              <p>Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;3000</p>
+              <p class="itemHeader">Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;3000</p>
               <p class="lineTrough">22500 Р.</p>
               <p class="redPrice">15500 Р.</p>
             </li>
@@ -207,7 +209,7 @@
                 <a href="#" class="buyBtn upperCase">Купить</a>
                 <a href="#" class="bkmkBtn upperCase">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;6000</p>
+              <p class="itemHeader">Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;6000</p>
               <p class="lineTrough">30500 Р.</p>
               <p class="redPrice">25500 Р.</p>
             </li>
@@ -219,10 +221,10 @@
                 <a href="#" class="buyBtn upperCase">Купить</a>
                 <a href="#" class="bkmkBtn upperCase">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;2000</p>
+              <p class="itemHeader">Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;2000</p>
               <p class="redPrice">12500 Р.</p>
             </li>
-            <li class="productListItem new">
+            <li class="productListItem">
               <a href="#">
                 <img src="img/perforator_1.jpg" alt="Перфоратор BOSCH BGF 3000" class="itemCard new">
               </a>
@@ -230,11 +232,11 @@
                 <a href="#" class="buyBtn upperCase">Купить</a>
                 <a href="#" class="bkmkBtn upperCase">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;3000</p>
+              <p class="itemHeader">Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;3000</p>
               <p class="lineTrough">22500 Р.</p>
               <p class="redPrice">15500 Р.</p>
             </li>
-            <li class="productListItem">
+            <li class="productListItem new">
               <a href="#">
                 <img src="img/perforator_2.jpg" alt="Перфоратор BOSCH BFG 6000" class="itemCard">
               </a>
@@ -242,11 +244,11 @@
                 <a href="#" class="buyBtn upperCase">Купить</a>
                 <a href="#" class="bkmkBtn upperCase">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;6000</p>
+              <p class="itemHeader">Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;6000</p>
               <p class="lineTrough">30500 Р.</p>
               <p class="redPrice">25500 Р.</p>
             </li>
-            <li class="productListItem">
+            <li class="productListItem new">
               <a href="#">
                 <img src="img/perforator_3.jpg" alt="Перфоратор BOSCH BFG 2000" class="itemCard">
               </a>
@@ -254,7 +256,7 @@
                 <a href="#" class="buyBtn upperCase">Купить</a>
                 <a href="#" class="bkmkBtn upperCase">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;2000</p>
+              <p class="itemHeader">Перфоратор <span class="upperCase">Bosch bfg</span>&nbsp;2000</p>
               <p class="redPrice">12500 Р.</p>
             </li>
           </ul>
@@ -267,15 +269,19 @@
         </div>
       </div>
     </div>
-    <div class="catalogDescription container">
-      <h2 class="upperCase">Пара слов о перфораторах</h2>
-      <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче,
-        бетоне и камне.
-        <br>
-        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
-        шуруповерта и отбойного молотка.
-        В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная
-        дрель.</p>
+    <div class="catalogBgContainer">
+      <div class="catalogDescription container">
+        <h2 class="upperCase">Пара слов о перфораторах</h2>
+        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
+          кирпиче,
+          бетоне и камне.
+          <br>
+          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
+          шуруповерта и отбойного молотка.
+          В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
+          ударная
+          дрель.</p>
+      </div>
     </div>
   </main>
   <!-- Попап с корзиной -->
@@ -315,9 +321,9 @@
       </div>
     </div>
     <div class="footerBottomBg">
-      <div class="footerBottom">
+      <div class="footerBottom container">
         <div>
-          <p>&copy; 2010-2017 Компания "Техномарт"<br>
+          <p>&copy; 2010&mdash;2019 Компания "Техномарт"<br>
             Все права защищены</p>
         </div>
         <div class="social">
@@ -328,7 +334,7 @@
         <div class="developed">
           <p>Обратная связь: <br>
             <a href="#">mail@htmlacademy.ru</a></p>
-          <p>Разработано - <br>
+          <p>Разработано &mdash; <br>
             <a href="https://up.htmlacademy.ru/htmlcss/27">htmlacademy.ru</a></p>
         </div>
       </div>

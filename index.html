@@ -15,8 +15,8 @@
             <img src="img/logo-technomart.svg" alt="Техномарт"></a>
           <div class="find">
             <form action="https://echo.htmlacademy.ru" method="post">
+              <input id="search" name="searchText" placeholder="Поиск:" type="search">
               <label class="searchLabel" for="search"></label>
-              <input type="search" id="search" placeholder="Поиск:" name="searchText">
             </form>
           </div>
           <div class="bookmarksCart">
@@ -30,8 +30,8 @@
       </div>
       </div>
       <div class="containerContactsLogin">
-        <div class="contactsLogin">
-          <h1>Интернет-магазин строительных&nbsp;материалов и инструментов для ремонта</h1>
+        <div class="contactsLogin container">
+          <h1>Интернет-магазин строительных&nbsp;материалов и&nbsp;инструментов&nbsp;для&nbsp;ремонта</h1>
           <div class="telAddress">
             <div class="telBorder">
               <a href="tel:+78125550555" class="tel">+7 (812) 555-05-55</a>
@@ -80,12 +80,7 @@
         </div>
         <div class="bottomCatalog">
           <div class="slider">
-            <input checked="" id="btn-1" name="toggle" type="radio">
-            <input id="btn-2" name="toggle" type="radio">
-            <div class="slider-controls">
-              <label for="btn-1"></label>
-              <label for="btn-2"></label>
-            </div>
+
             <p class="boldText upperCase">Дрели</p>
             <p>Соседям на радость</p>
             <div class="arrows">
@@ -93,6 +88,12 @@
               <a href="#"><img alt="" src="img/icon-right.svg"></a>
             </div>
             <a class="btn" href="">Открыть каталог</a>
+            <input checked="" id="btn-1" name="toggle" type="radio">
+            <input id="btn-2" name="toggle" type="radio">
+            <div class="slider-controls">
+              <label for="btn-1"></label>
+              <label for="btn-2"></label>
+            </div>
           </div>
           <div class="sliderRight">
             <div class="catalogItemBottom">
@@ -127,9 +128,9 @@
                 <a href="#" class="buyBtn">Купить</a>
                 <a href="#" class="bkmkBtn">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch BFG</span>&nbsp;9000</p>
+              <p class="itemHeader">Перфоратор <span class="upperCase">Bosch BFG</span>&nbsp;9000</p>
               <p class="lineTrough">32500 Р.</p>
-              <p class="redPrice">25500 Р.</p>
+              <p class="redPrice">25500&nbsp;Р.</p>
             </li>
             <li class="popularItem">
               <a href="#">
@@ -139,9 +140,9 @@
                 <a href="#" class="buyBtn">Купить</a>
                 <a href="#" class="bkmkBtn">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch BFG</span>&nbsp;3000</p>
+              <p class="itemHeader">Перфоратор <span class="upperCase">Bosch BFG</span>&nbsp;3000</p>
               <p class="lineTrough">22500 Р.</p>
-              <p class="redPrice">15500 Р.</p>
+              <p class="redPrice">15500&nbsp;Р.</p>
             </li>
             <li class="popularItem">
               <a href="#">
@@ -151,9 +152,9 @@
                 <a href="#" class="buyBtn">Купить</a>
                 <a href="#" class="bkmkBtn">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch BFG</span>&nbsp;6000</p>
+              <p class="itemHeader">Перфоратор <span class="upperCase">Bosch BFG</span>&nbsp;6000</p>
               <p class="lineTrough">30500 Р.</p>
-              <p class="redPrice">25500 Р.</p>
+              <p class="redPrice">25500&nbsp;Р.</p>
             </li>
             <li class="popularItem new">
               <a href="#">
@@ -163,9 +164,10 @@
                 <a href="#" class="buyBtn">Купить</a>
                 <a href="#" class="bkmkBtn">В закладки</a>
               </div>
-              <p>Перфоратор <span class="upperCase">Bosch BFG</span>&nbsp;2000</p>
+              <p class="itemHeader">Перфоратор <span class="upperCase">Bosch BFG</span>&nbsp;2000</p>
               <p class="lineTrough"></p>
-              <p class="redPrice">12500 Р</p>
+              <p class="redPrice">12500&nbsp;Р</p>
+
             </li>
           </ul>
         </div>
@@ -228,7 +230,7 @@
                   Мы с удовольствием доставим ваш товар прямо <br>
                   к вашему подъезду совершенно бесплатно! <br>
                   Ведь мы неплохо заработаем, <br>
-                  поднимая его на ваш на этаж!
+                  поднимая его на ваш этаж!
                 </p>
               </div>
               <div class="serviceBtnWarranty visuallyHidden">
@@ -248,20 +250,23 @@
               </div>
             </div>
           </div>
+        </div>
       </div>
-      </div>
+
       <div class="aboutColumns">
-      <section class="about">
-        <h2>Компания "Техномарт"</h2>
-        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушных любителей сэкономить на гастарбайтерах.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
-        <ul>
-          <li class="delivery">Деловые линии</li>
-          <li class="delivery">Автотрейдинг</li>
-          <li class="delivery">ЖелДорЭкспедиция</li>
-        </ul>
-        <a href="#" class="btn">Подробнее о компании</a>
-      </section>
+        <section class="about">
+          <h2>Компания "Техномарт"</h2>
+          <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит
+            равнодушных любителей сэкономить на гастарбайтерах.</p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт&nbsp;работает&nbsp;со&nbsp;многими
+            транспортными компаниями:</p>
+          <ul>
+            <li class="delivery">Деловые линии</li>
+            <li class="delivery">Автотрейдинг</li>
+            <li class="delivery">ЖелДорЭкспедиция</li>
+          </ul>
+          <a href="#" class="btn">Подробнее о компании</a>
+        </section>
       <section class="map">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами,<br>
@@ -322,23 +327,23 @@
       </div>
       </div>
       <div class="footerBottomBg">
-      <div class="footerBottom">
-        <div>
-          <p>&copy; 2010-2017 Компания "Техномарт"<br>
-          Все права защищены</p>
+        <div class="footerBottom container">
+          <div>
+            <p>&copy; 2010&mdash;2019 Компания "Техномарт"<br>
+              Все права защищены</p>
+          </div>
+          <div class="social">
+            <div class="socialItem"><a href="#"><img alt="" src="img/icon-vk.svg"></a></div>
+            <div class="socialItem"><a href="#"><img alt="" src="img/icon-fb.svg"></a></div>
+            <div class="socialItem"><a href="#"><img alt="" src="img/icon-insta.svg"></a></div>
+          </div>
+          <div class="developed">
+            <p>Обратная связь: <br>
+              <a href="#">mail@htmlacademy.ru</a></p>
+            <p>Разработано &mdash; <br>
+              <a href="https://up.htmlacademy.ru/htmlcss/27">htmlacademy.ru</a></p>
+          </div>
         </div>
-        <div class="social">
-          <div class="socialItem"><a href="#"><img alt="" src="img/icon-vk.svg"></a></div>
-          <div class="socialItem"><a href="#"><img alt="" src="img/icon-fb.svg"></a></div>
-          <div class="socialItem"><a href="#"><img alt="" src="img/icon-insta.svg"></a></div>
-        </div>
-        <div class="developed">
-          <p>Обратная связь: <br>
-            <a href="#">mail@htmlacademy.ru</a></p>
-          <p>Разработано - <br>
-            <a href="https://up.htmlacademy.ru/htmlcss/27">htmlacademy.ru</a></p>
-        </div>
-      </div>
       </div>
     </footer>
   </body>
