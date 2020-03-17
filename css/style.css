@@ -742,8 +742,7 @@ h2 {
   width: 220px;
   min-height: 317px;
   margin-right: 20px;
-  margin-bottom: 13px;
-
+  margin-bottom: 21px;
 
   border: #e5e5e5 1px solid;
 
@@ -2019,4 +2018,142 @@ button[type=submit] {
   height: 2px;
 }
 
+.feedback {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  z-index: 200;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: block;
+  -webkit-animation: bounce .4s;
+  animation: bounce .4s;
+  border-top: 7px solid #ee3643;
+  width: 620px;
+  background: #fff;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, .7);
+}
 
+.feedback form {
+  display: block;
+  margin-top: 0;
+}
+
+.feedback fieldset {
+
+}
+
+.modalClose {
+  -webkit-appearance: button;
+  padding: 0;
+  border: none;
+  text-transform: none;
+  overflow: visible;
+  font: inherit;
+  margin: 0;
+
+}
+
+.modalClose::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: 20px;
+  height: 5px;
+  background: #ee3643;
+  border: none;
+  cursor: pointer;
+}
+
+.modalClose::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 20px;
+  height: 5px;
+  background: #ee3643;
+  border: none;
+  cursor: pointer;
+}
+
+.answer {
+  margin: 23px 80px 0;
+  display: block;
+}
+
+.answer span {
+  display: inline-block;
+  margin: 0 0 9px;
+}
+
+.feedback input[type=text] {
+  width: 200px;
+  margin: 0 20px 17px 0;
+  padding-left: 14px;
+  font-size: 13px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  text-align: left;
+  color: #999;
+  background: #fff;
+  border: 2px solid #999;
+  border-radius: 5px;
+  line-height: 18px;
+  font-weight: 400;
+  font-style: normal;
+  outline: none;
+}
+
+.feedback input::placeholder {
+  color: black;
+}
+
+.feedback textarea {
+  margin-bottom: 24px;
+  padding: 5px 0 0 12px;
+  font-size: 13px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: #a9a9a9;
+  border: 3px solid #d7dcde;
+  outline: 0;
+  line-height: 18px;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 5px;
+}
+
+.feedback label {
+  line-height: 18px;
+  font-weight: 400;
+  font-style: normal;
+  outline: none;
+  font-size: 18px;
+  font-family: "Cuprum", "Arial", sans-serif;
+}
+
+.formBtn {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  padding: 37px 0;
+  background: #f1f1f1;
+}
+
+.formBtn button {
+  width: 460px;
+  margin: 0 auto;
+  padding: 11px 50px 8px;
+  font-size: 14px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background: #ee3643;
+  outline: none;
+  border: none;
+}

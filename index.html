@@ -5,6 +5,7 @@
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/min.js"></script>
   </head>
   <body>
     <header>
@@ -272,7 +273,7 @@
         <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
         <a class="location" href="#mapPopup"><img alt="Схема проезда" src="img/map.jpg"></a>
-        <a href="#" class="btn">Заблудились? Напишите нам</a>
+        <a class="btn" href="#" id="formOpen">Заблудились? Напишите нам</a>
       </section>
       </div>
     </main>
@@ -283,17 +284,29 @@
         width="940" height="446"></iframe>
     </div>
     <!-- Попап с формой обратной связи -->
-    <div class="feedback visuallyHidden">
+    <div class="feedback container">
+      <button class="modalClose" type="button"></button>
       <form action="https://echo.htmlacademy.ru">
-        <fieldset>
-          <label for="name">Ваше имя:</label>
-          <input type="text" id="name" name="feedbackName">
-          <label for="email">Ваш e-mail:</label>
-          <input type="text" id="email" name="feedbackMail">
-          <label for="letter">Текст письма:</label>
-          <textarea name="letterForm" id="letter" cols="100" rows="10"></textarea>
-          <input type="submit" value="Отправить">
-        </fieldset>
+        <div class="answer">
+          <div class="form-answer">
+            <label>
+              <span>Ваше имя:</span><br>
+              <input name="login" onblur="placeholder='Представьтесь, пожалуйста';" onfocus="placeholder='';"
+                     placeholder="Представьтесь, пожалуйста" type="text">
+            </label>
+            <label>
+              <span>Ваш e-mail:</span><br>
+              <input name="email" onblur="placeholder='Для отправки ответа';" onfocus="placeholder='';"
+                     placeholder="Для отправки ответа" type="text">
+            </label>
+            <span>Текст письма:</span>
+            <textarea cols="61" name="textletter" onblur="placeholder='В свободной форме';" onfocus="placeholder='';"
+                      placeholder="В свободной форме" rows="6"></textarea>
+          </div>
+        </div>
+        <div class="formBtn">
+          <button class="upperCase" type="submit">Отправить</button>
+        </div>
       </form>
     </div>
     <footer>
