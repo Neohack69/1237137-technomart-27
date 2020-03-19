@@ -176,7 +176,7 @@ fieldset {
 }
 
 .find input {
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 17px;
 
   width: 270px;
@@ -466,7 +466,7 @@ h2 {
 
 .about p,
 .map p {
-  font-family: PT Sans, Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
 
@@ -762,6 +762,23 @@ h2 {
   color: #b7bfc8;
 }
 
+.shoppingHistory {
+  position: relative;
+}
+
+.shoppingHistory::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  width: 4px;
+  height: 4px;
+
+  border: none;
+  background-image: url("../img/shape.svg");
+  z-index: 10;
+}
+
 .account a:active {
   color: #b7bfc8;
 }
@@ -777,7 +794,7 @@ h2 {
 
   width: 100%;
   padding-top: 1px;
-  padding-right: 60px;
+  padding-right: 55px;
   padding-left: 0;
 }
 
@@ -927,7 +944,7 @@ h2 {
 
 .productListItem p,
 .popularItem {
-  font-family: PT Sans, Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   font-weight: bold;
   line-height: 20px;
@@ -987,7 +1004,7 @@ h2 {
 }
 
 .buyBtns {
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
 
   display: none;
 
@@ -999,7 +1016,7 @@ li:hover img.itemCard {
 }
 
 li:hover .buyBtns {
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1031,7 +1048,7 @@ li:hover .buyBtns {
   color: white;
 }
 
-.slider {
+.firstSlide {
   position: relative;
 
   width: 620px;
@@ -1039,8 +1056,21 @@ li:hover .buyBtns {
   padding-top: 20px;
   padding-right: 25px;
   padding-left: 25px;
-
+  background-color: saddlebrown;
   background-image: url("../img/slider-1.jpg");
+}
+
+.secondSlide {
+  display: none;
+  position: relative;
+
+  width: 620px;
+  height: 266px;
+  padding-top: 20px;
+  padding-right: 25px;
+  padding-left: 25px;
+  background-color: saddlebrown;
+  background-image: url("../img/slider-2.jpg");
 }
 
 .slider .btn {
@@ -1899,7 +1929,7 @@ main fieldset {
 }
 
 .catalogDescription {
-  font-family: PT Sans, Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 26px;
 }
@@ -1996,7 +2026,7 @@ main fieldset {
 
 .sortBy a:first-child {
   color: #ee3643;
-  border-bottom: none !important;
+  border-bottom: none;
 }
 
 .sortBy a:not(.sortByUp):not(.sortByDown):hover {
@@ -2142,6 +2172,7 @@ main fieldset {
 }
 
 .costFieldset {
+  border: 0;
   width: 220px;
   margin: 0 auto;
   margin-top: 17px;
