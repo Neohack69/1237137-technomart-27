@@ -1,55 +1,43 @@
 @font-face {
-  font-family: 'Cuprum';
-  font-weight: normal;
-  font-style: normal;
-
-  src: url('../fonts/cuprum.woff') format('woff');
-  src: url('../fonts/cuprum.woff2') format('woff2');
+  font-family: "Cuprum";
+  src: url(../fonts/cuprum.woff2) format("woff2"), url(../fonts/cuprum.woff) format("woff");
+  font-weight: 400;
+  font-style: normal
 }
 
 @font-face {
-  font-family: 'Cuprum';
-  font-weight: bold;
-  font-style: normal;
-
-  src: url('../fonts/cuprumbold.woff') format('woff');
-  src: url('../fonts/cuprumbold.woff2') format('woff2');
+  font-family: "Cuprum";
+  src: url(../fonts/cuprumbold.woff2) format("woff2"), url(../fonts/cuprumbold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal
 }
 
 @font-face {
-  font-family: 'Cuprum';
-  font-weight: bold;
-  font-style: italic;
-
-  src: url('../fonts/cuprumbolditalic.woff') format('woff');
-  src: url('../fonts/cuprumbolditalic.woff2') format('woff2');
+  font-family: "Cuprum";
+  src: url(../fonts/cuprumbolditalic.woff2) format("woff2"), url(../fonts/cuprumbolditalic.woff) format("woff");
+  font-weight: 700;
+  font-style: italic
 }
 
 @font-face {
-  font-family: 'Cuprum';
-  font-weight: normal;
-  font-style: italic;
-
-  src: url('../fonts/cuprumitalic.woff') format('woff');
-  src: url('../fonts/cuprumitalic.woff2') format('woff2');
+  font-family: "Cuprum";
+  src: url(../fonts/cuprumitalic.woff2) format("woff2"), url(../fonts/cuprumitalic.woff) format("woff");
+  font-weight: 400;
+  font-style: italic
 }
 
 @font-face {
-  font-family: 'PT Sans';
-  font-weight: normal;
-  font-style: normal;
-
-  src: url('../fonts/ptsans.woff') format('woff');
-  src: url('../fonts/ptsans.woff2') format('woff2');
+  font-family: "PT Sans";
+  src: url(../fonts/ptsans.woff2) format("woff2"), url(../fonts/ptsans.woff) format("woff");
+  font-weight: 400;
+  font-style: normal
 }
 
 @font-face {
-  font-family: 'PT Sans';
-  font-weight: bold;
-  font-style: normal;
-
-  src: url('../fonts/ptsansbold.woff') format('woff');
-  src: url('../fonts/ptsansbold.woff2') format('woff2');
+  font-family: "PT Sans";
+  src: url(../fonts/ptsansbold.woff2) format("woff2"), url(../fonts/ptsansbold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal
 }
 
 html {
@@ -65,8 +53,8 @@ html {
 }
 
 body {
-  font-family: Cuprum, Arial, sans-serif;
-  font-size: 16px; /* временно */
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 16px;
 
   margin: 0;
   padding: 0;
@@ -77,7 +65,7 @@ a {
 }
 
 h1 {
-  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   font-style: italic;
@@ -152,8 +140,20 @@ fieldset {
   text-align: center;
 
   background-color: #ee3643;
-  -webkit-box-shadow: #b52933 0 5px;
-  box-shadow: #b52933 0 5px;
+
+  position: relative;
+}
+
+.logo::after {
+  content: "";
+  background: #b52933;
+
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  left: 0;
+  top: 100%;
+  z-index: 1;
 }
 
 .logo img {
@@ -230,7 +230,7 @@ fieldset {
 
 .find input:focus + .searchLabel {
   opacity: 1;
-  background: url('../img/icon-search-red.svg') no-repeat;
+  background: url("../img/icon-search-red.svg") no-repeat;
 }
 
 .bookmarksCart a:hover {
@@ -263,7 +263,6 @@ fieldset {
 
   color: white;
 }
-
 
 .bookmarksCart {
   height: 42px;
@@ -344,7 +343,7 @@ fieldset {
   width: 19px;
   height: 19px;
 
-  content: url('../img/icon-phone.svg');
+  content: url("../img/icon-phone.svg");
 }
 
 .find {
@@ -417,7 +416,7 @@ fieldset {
 .login::before {
   padding-right: 16px;
 
-  content: url('../img/icon-logout.svg');
+  content: url("../img/icon-logout.svg");
 }
 
 .loginLink a:hover {
@@ -425,7 +424,7 @@ fieldset {
 }
 
 .login:hover::before {
-  content: url('../img/icon-logout-blue.svg');
+  content: url("../img/icon-logout-blue.svg");
 
   opacity: 1;
 }
@@ -435,7 +434,7 @@ fieldset {
 }
 
 .login:active::before {
-  content: url('../img/icon-login.svg');
+  content: url("../img/icon-login.svg");
 }
 
 .siteNav {
@@ -455,7 +454,7 @@ fieldset {
 }
 
 h2 {
-  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   font-weight: normal;
   font-style: normal;
@@ -496,11 +495,10 @@ h2 {
   width: 25px;
   height: 2px;
 
-  content: '';
+  content: "";
 
   background: #fb565a;
 }
-
 
 .about li {
   margin-bottom: 21px;
@@ -601,7 +599,6 @@ h2 {
   color: white;
 }
 
-
 .footerBottom a {
   color: #ffd180;
 }
@@ -643,7 +640,6 @@ h2 {
   left: 10px;
 }
 
-
 .navYellow a {
   color: #ffd180;
 }
@@ -666,7 +662,7 @@ h2 {
 .bookmarksCart :first-child::before {
   padding-right: 13px;
 
-  content: url('../img/icon-bookmark.svg');
+  content: url("../img/icon-bookmark.svg");
 
   opacity: .3;
 }
@@ -674,7 +670,7 @@ h2 {
 .bookmarksCart :last-child::before {
   padding-right: 17px;
 
-  content: url('../img/icon-cart.svg');
+  content: url("../img/icon-cart.svg");
 
   opacity: .3;
 }
@@ -712,27 +708,26 @@ h2 {
   text-align: center;
 }
 
-
 .bookmarksCart :first-child:hover::before {
-  content: url('../img/icon-bookmark.svg');
+  content: url("../img/icon-bookmark.svg");
 
   opacity: 1;
 }
 
 .bookmarksCart :last-child:hover::before {
-  content: url('../img/icon-cart.svg');
+  content: url("../img/icon-cart.svg");
 
   opacity: 1;
 }
 
 .bookmarksCart :first-child:active::before {
-  content: url('../img/icon-bookmark.svg');
+  content: url("../img/icon-bookmark.svg");
 
   opacity: .5;
 }
 
 .bookmarksCart :last-child:active::before {
-  content: url('../img/icon-cart.svg');
+  content: url("../img/icon-cart.svg");
 
   opacity: .5;
 }
@@ -741,18 +736,18 @@ h2 {
   padding-right: 10px;
 
   color: transparent;
-  background-image: url('../img/icon-logout.svg');
+  background-image: url("../img/icon-logout.svg");
   background-repeat: no-repeat;
 }
 
 .logout:hover {
   color: transparent;
-  background-image: url('../img/icon-logout-blue.svg');
+  background-image: url("../img/icon-logout-blue.svg");
 }
 
 .logout:active {
   color: transparent;
-  background-image: url('../img/icon-logout.svg');
+  background-image: url("../img/icon-logout.svg");
 }
 
 .shoppingHistory a:hover {
@@ -789,11 +784,11 @@ h2 {
 .userName::before {
   padding-right: 15px;
 
-  content: url('../img/icon-user.svg');
+  content: url("../img/icon-user.svg");
 }
 
 .userName:hover::before {
-  content: url('../img/icon-user-blue.svg');
+  content: url("../img/icon-user-blue.svg");
 }
 
 .contactsLogin ul {
@@ -823,15 +818,14 @@ h2 {
 }
 
 .userName:active::before {
-  content: url('../img/icon-user.svg');
+  content: url("../img/icon-user.svg");
 }
-
 
 .breadcrumbs ul {
   margin-left: 20px;
   padding: 0;
 
-  list-style-image: url('../img/icon-right-small.svg');
+  list-style-image: url("../img/icon-right-small.svg");
 }
 
 .breadcrumbs li {
@@ -839,7 +833,7 @@ h2 {
 }
 
 .breadcrumbs a {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 
@@ -955,6 +949,7 @@ h2 {
   margin-bottom: 0;
 
   white-space: pre-wrap;
+  max-width: 200px;
 }
 
 .redPrice {
@@ -980,7 +975,7 @@ h2 {
   width: 0;
   height: 0;
 
-  content: '';
+  content: "";
 
   border: 20px solid white;
   border-left-color: #ee3643;
@@ -1045,7 +1040,7 @@ li:hover .buyBtns {
   padding-right: 25px;
   padding-left: 25px;
 
-  background-image: url('../img/slider-1.jpg');
+  background-image: url("../img/slider-1.jpg");
 }
 
 .slider .btn {
@@ -1063,7 +1058,7 @@ li:hover .buyBtns {
 }
 
 .catalogItemBottom {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 24px;
   font-weight: bold;
 
@@ -1149,7 +1144,7 @@ li:hover .buyBtns {
 .buyBtn::before {
   padding-right: 20px;
 
-  content: url('../img/icon-cart.svg');
+  content: url("../img/icon-cart.svg");
 
   opacity: .3;
 }
@@ -1161,7 +1156,7 @@ li:hover .buyBtns {
 .buyBtn:hover::before {
   padding-right: 20px;
 
-  content: url('../img/icon-cart-white.svg');
+  content: url("../img/icon-cart-white.svg");
 
   opacity: 1;
 }
@@ -1173,7 +1168,7 @@ li:hover .buyBtns {
 .buyBtn:active::before {
   padding-right: 20px;
 
-  content: url('../img/icon-cart-white.svg');
+  content: url("../img/icon-cart-white.svg");
 
   opacity: 1;
 }
@@ -1215,9 +1210,9 @@ li:hover .buyBtns {
   width: 60px;
   height: 59px;
 
-  content: '';
+  content: "";
 
-  background-image: url('../img/new-flag.png');
+  background-image: url("../img/new-flag.png");
   background-repeat: no-repeat;
 }
 
@@ -1261,7 +1256,7 @@ main {
 }
 
 main legend {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   font-weight: bold;
 }
@@ -1323,7 +1318,6 @@ main fieldset {
 .sort p {
   display: inline;
 }
-
 
 .siteNavItem a {
   font-size: 17px;
@@ -1424,7 +1418,7 @@ main fieldset {
 }
 
 .catalogItem {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 24px;
   font-weight: bold;
 
@@ -1547,8 +1541,6 @@ main fieldset {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-
-  width: 660px;
 }
 
 .rightSide nav {
@@ -1557,7 +1549,7 @@ main fieldset {
 }
 
 .leftSide a {
-  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   font-weight: 400;
   font-style: normal;
@@ -1576,6 +1568,14 @@ main fieldset {
   color: #fff;
   border-bottom: 5px solid #b52933;
   background-color: #ee3643;
+}
+
+.popularItemsList {
+  margin-bottom: 17px;
+}
+
+.leftSide {
+  width: 650px;
 }
 
 .leftSide p {
@@ -1687,7 +1687,7 @@ main fieldset {
 }
 
 .smallText {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 23px;
 }
@@ -1709,7 +1709,7 @@ main fieldset {
   width: 100%;
   padding-top: 80px;
 
-  background-image: url('../img/delivery.png');
+  background-image: url("../img/delivery.png");
   background-repeat: no-repeat;
   background-position: right bottom;
 }
@@ -1720,8 +1720,37 @@ main fieldset {
   color: #32425c;
 }
 
+.serviceBtnCredit {
+  width: 100%;
+  padding-top: 80px;
+
+  background-image: url("../img/bg-credit.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.serviceBtnWarranty {
+  width: 100%;
+  padding-top: 80px;
+}
+
+.serviceBtnCredit a {
+  padding: 10px 44px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Cuprum", "Arial", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background: #ee3642;
+  border-radius: 5px;
+}
+
 .serviceBlockRight p {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
 
@@ -1783,7 +1812,7 @@ main fieldset {
 }
 
 .service-toggle label {
-  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 21px;
   font-weight: 700;
   font-style: normal;
@@ -1876,9 +1905,9 @@ main fieldset {
 }
 
 .catalogBgContainer {
-  margin-top: 70px;
+  margin-top: 60px;
   padding-top: 42px;
-  padding-bottom: 52px;
+  padding-bottom: 55px;
 
   background-color: #f2f6f8;
 }
@@ -1915,7 +1944,7 @@ main fieldset {
 }
 
 .sort {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1938,7 +1967,7 @@ main fieldset {
 }
 
 .sort p {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 
@@ -1981,7 +2010,7 @@ main fieldset {
 }
 
 .sortBy a {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -1992,7 +2021,7 @@ main fieldset {
 }
 
 .sortByUp:active {
-  background-image: url('../img/icon-up-dir-red.svg');
+  background-image: url("../img/icon-up-dir-red.svg");
 }
 
 .sortByDown:active {
@@ -2000,7 +2029,7 @@ main fieldset {
   -ms-transform: scaleY(-1);
   transform: scaleY(-1);
 
-  background-image: url('../img/icon-up-dir-red.svg');
+  background-image: url("../img/icon-up-dir-red.svg");
 }
 
 .sortControl {
@@ -2021,7 +2050,7 @@ main fieldset {
   margin-right: 20px;
 
   opacity: 1;
-  background-image: url('../img/icon-up-dir-red.svg');
+  background-image: url("../img/icon-up-dir-red.svg");
   background-repeat: no-repeat;
 }
 
@@ -2036,7 +2065,7 @@ main fieldset {
   margin: auto;
 
   opacity: .3;
-  background-image: url('../img/icon-down-dir.svg');
+  background-image: url("../img/icon-down-dir.svg");
   background-repeat: no-repeat;
 }
 
@@ -2058,7 +2087,7 @@ main fieldset {
 
   opacity: .8;
   color: #000;
-  background: url('../img/checkbox-off.svg') no-repeat;
+  background: url("../img/checkbox-off.svg") no-repeat;
 }
 
 .checkBox:checked + label {
@@ -2075,7 +2104,7 @@ main fieldset {
 
   opacity: .8;
   color: #000;
-  background: url('../img/checkbox-on.svg') no-repeat;
+  background: url("../img/checkbox-on.svg") no-repeat;
 }
 
 .checkBox:checked + label:hover,
@@ -2092,7 +2121,7 @@ main fieldset {
 }
 
 .formHeader {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 
@@ -2179,7 +2208,7 @@ main fieldset {
 }
 
 .side input[type=text] {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 17px;
   font-weight: 400;
   font-style: normal;
@@ -2201,7 +2230,6 @@ main fieldset {
   padding-left: 0;
 }
 
-
 .productionsFieldset input[type=radio] {
   display: none;
 
@@ -2222,7 +2250,7 @@ main fieldset {
 
   opacity: .8;
   color: #000;
-  background-image: url('../img/radio-off.svg');
+  background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
 }
 
@@ -2240,7 +2268,7 @@ main fieldset {
 
   opacity: .8;
   color: #000;
-  background-image: url('../img/radio-on.svg');
+  background-image: url("../img/radio-on.svg");
   background-repeat: no-repeat;
 }
 
@@ -2250,7 +2278,7 @@ main fieldset {
 }
 
 button[type=submit] {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 
@@ -2266,25 +2294,30 @@ button[type=submit] {
 }
 
 .pageSelect {
-  margin-top: 45px;
+  margin-top: 32px;
 }
 
 .pageSelect a {
-  font-family: 'PT Sans', Arial, sans-serif;
-
+  display: inline-block;
+  padding: 8px 14px 10px 15px;
   margin-right: 6px;
-  padding: 8px 11px 10px 16px;
-
-  color: black;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
   border: 1px solid #e5e5e5;
-  border-radius: 2px;
-  background-color: white;
+  border-radius: 3px;
 }
 
 .pageSelect a:last-child {
   line-height: 18px;
 
-  padding: 8px 16px 10px 31px;
+  padding: 8px 30px 10px 31px;
 }
 
 .pageSelect a:first-child {
@@ -2307,7 +2340,7 @@ button[type=submit] {
 }
 
 .priceControls input[type=number] {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 17px;
   font-weight: 400;
   font-style: normal;
@@ -2396,7 +2429,7 @@ button[type=submit] {
   width: 20px;
   height: 5px;
 
-  content: '';
+  content: "";
   cursor: pointer;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -2414,7 +2447,7 @@ button[type=submit] {
   width: 20px;
   height: 5px;
 
-  content: '';
+  content: "";
   cursor: pointer;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2437,7 +2470,7 @@ button[type=submit] {
 }
 
 .feedback input[type=text] {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   font-weight: 400;
   font-style: normal;
@@ -2477,7 +2510,7 @@ button[type=submit] {
 }
 
 .feedback textarea {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   font-weight: 400;
   font-style: normal;
@@ -2496,7 +2529,7 @@ button[type=submit] {
 }
 
 .feedback label {
-  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
@@ -2519,7 +2552,7 @@ button[type=submit] {
 }
 
 .formBtn button {
-  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
 
   width: 460px;
