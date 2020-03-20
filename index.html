@@ -82,7 +82,7 @@
       <div class="slider">
         <div class="firstSlide">
           <p class="boldText upperCase">Дрели</p>
-          <p>Соседям на радость</p>
+          <p class="sliderDescription">Соседям на радость!</p>
           <div class="arrows">
             <a href="#"><img alt="Предыдущий слайд" src="img/icon-left.svg"></a>
             <a href="#"><img alt="Следующий слайд" src="img/icon-right.svg"></a>
@@ -97,13 +97,13 @@
         </div>
         <div class="secondSlide visuallyHidden">
           <p class="boldText upperCase">Перфораторы</p>
-          <p>Настоящие мужские игрушки</p>
+          <p class="sliderDescription">Настоящие мужские игрушки</p>
           <div class="arrows">
             <a href="#"><img alt="Предыдущий слайд" src="img/icon-left.svg"></a>
             <a href="#"><img alt="Следующий слайд" src="img/icon-right.svg"></a>
           </div>
           <a class="btn" href="catalog.html">Открыть каталог</a>
-          <input checked id="btn-4" name="toggle" type="radio">
+          <input id="btn-4" name="toggle" type="radio">
           <input id="btn-3" name="toggle" type="radio">
           <div class="slider-controls">
             <label for="btn-4"></label>
@@ -289,15 +289,15 @@
       <p>Вы можете забрать товар сами,<br>
         заехав в наш офис:</p>
       <a class="location" href="#mapPopup"><img alt="Схема проезда" src="img/map.jpg"></a>
-      <a class="btn" href="#" id="formOpen">Заблудились? Напишите нам</a>
+      <a class="btn" href="form.html" id="formOpen">Заблудились? Напишите нам</a>
     </section>
   </div>
 </main>
-<div class="popupWindow visuallyHidden" id="mapPopup">
-  <iframe
-    height="446"
-    src="https://yandex.ru/map-widget/v1/?um=constructor%3Adb6e88ce5aa1e869aebe1b468fa13dc79cafcc3ff21963ca692083d3d555bf95&amp;source=constructor"
-    width="940"></iframe>
+<div class="popupWindow container" id="mapPopup">
+  <button class="popupClose" type="button"></button>
+  <iframe height="447"
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa9865b3611315fa5fb61358d9bc6b5be727f61d021dee298cf6411a449af5301&amp;source=constructor"
+          width="938"></iframe>
 </div>
 <div class="feedback container visuallyHidden">
   <button class="modalClose" type="button"></button>
@@ -373,5 +373,19 @@
     </div>
   </div>
 </footer>
+<script src="js/script.js"></script>
+<!--<script>
+  var link = document.querySelector("#formOpen");
+  link.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    var form =  document.querySelector(".feedback");
+    form.classList.remove("visuallyHidden");
+  } )
+  var close = document.querySelector(".modalClose");
+  close.addEventListener("click", function (evt) {
+    var form =  document.querySelector(".feedback");
+    form.classList.add("visuallyHidden");
+  })
+</script>-->
 </body>
 </html>

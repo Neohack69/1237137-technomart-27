@@ -277,7 +277,8 @@ fieldset {
   -ms-flex-align: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  font-size: 17px;
+  padding-left: 20px;
 
   width: 150px;
   height: 42px;
@@ -311,15 +312,15 @@ fieldset {
 .contactsLogin h1 {
   float: left;
 
-  width: 247px;
+  width: 220px;
   margin: 3px 0 40px 52px;
 }
 
 .address {
   font-size: 14px;
 
-  margin-top: 7px;
-  padding-left: 7px;
+  margin-top: 8px;
+
 
   color: #32425c;
 }
@@ -331,14 +332,15 @@ fieldset {
 
   display: block;
 
-  padding-left: 75px;
+  padding-left: 70px;
 
   color: #ee3643;
 }
 
 .tel::before {
   position: absolute;
-  left: 15px;;
+  left: 12px;
+  top: 3px;
 
   width: 19px;
   height: 19px;
@@ -354,7 +356,7 @@ fieldset {
   align-items: center;
   -ms-flex-align: center;
 
-  width: 270px;
+  width: 265px;
   height: 100%;
 
   text-align: center;
@@ -371,8 +373,22 @@ fieldset {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin-right: 20px;
 
-  margin-left: -50px;
+  text-align: center;
+}
+
+.telAddres {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 
   text-align: center;
 }
@@ -390,7 +406,30 @@ fieldset {
   margin-left: 10px;
 }
 
-.loginLink a {
+.login {
+  font-size: 21px;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  height: 45px;
+  padding-right: 25px;
+  padding-left: 10px;
+
+  color: black;
+  background-color: white;
+}
+
+.signUp {
   font-size: 21px;
 
   display: -webkit-box;
@@ -412,6 +451,7 @@ fieldset {
   color: black;
   background-color: white;
 }
+
 
 .login::before {
   padding-right: 16px;
@@ -470,17 +510,17 @@ h2 {
   font-size: 13px;
   line-height: 24px;
 
-  padding-bottom: 10px;
+  padding-bottom: 12px;
 }
 
 .map img {
   padding-top: 9px;
-  padding-bottom: 34px;
+  padding-bottom: 35px;
 }
 
 .about ul {
   margin-top: -5px;
-  padding-bottom: 9px;
+  padding-bottom: 4px;
 
   list-style-type: none;
 }
@@ -502,6 +542,7 @@ h2 {
 
 .about li {
   margin-bottom: 21px;
+  font-size: 18px;
 }
 
 .btn {
@@ -651,9 +692,11 @@ h2 {
   -webkit-box-align: center;
   align-items: center;
   -ms-flex-align: center;
+  -webkit-box-pack: stretch;
+  -ms-flex-pack: stretch;
   justify-content: stretch;
 
-  width: 300px;
+  width: 305px;
   height: 42px;
 
   text-align: center;
@@ -686,7 +729,7 @@ h2 {
   -ms-flex-pack: center;
   justify-content: center;
 
-  width: 150px;
+  width: 166px;
 
   text-align: center;
 }
@@ -700,9 +743,9 @@ h2 {
   -ms-flex-align: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  padding-left: 22px;
 
-  width: 150px;
+  width: 142px;
   height: 100%;
 
   text-align: center;
@@ -840,6 +883,7 @@ h2 {
 
 .breadcrumbs ul {
   margin-left: 20px;
+  margin-top: 20px;
   padding: 0;
 
   list-style-image: url("../img/icon-right-small.svg");
@@ -866,8 +910,8 @@ h2 {
 
 .catalogName h2 {
   margin: 0 auto;
-  padding-top: 28px;
-  padding-left: 30px;
+  padding-top: 25px;
+  padding-left: 28px;
 }
 
 .productListItem,
@@ -919,7 +963,6 @@ h2 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  align-items: center;
   -ms-flex-align: center;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
@@ -931,7 +974,6 @@ h2 {
   margin-top: 53px;
   margin-bottom: 20px;
   padding-right: 24px;
-  padding-left: 30px;
 
   text-align: center;
 
@@ -940,6 +982,14 @@ h2 {
 
 .popularItemsHeader .btn {
   width: 253px;
+  height: 37px;
+  padding-top: 10px;
+  margin-top: 25px;
+}
+
+.popularItemsHeader h2 {
+  padding-top: 3px;
+  padding-left: 28px;
 }
 
 .productListItem p,
@@ -1054,7 +1104,6 @@ li:hover .buyBtns {
   width: 620px;
   height: 266px;
   padding-top: 20px;
-  padding-right: 25px;
   padding-left: 25px;
   background-color: saddlebrown;
   background-image: url("../img/slider-1.jpg");
@@ -1067,7 +1116,6 @@ li:hover .buyBtns {
   width: 620px;
   height: 266px;
   padding-top: 20px;
-  padding-right: 25px;
   padding-left: 25px;
   background-color: saddlebrown;
   background-image: url("../img/slider-2.jpg");
@@ -1075,11 +1123,11 @@ li:hover .buyBtns {
 
 .slider .btn {
   height: 125px;
-  padding: 8px 50px;
+  padding: 11px 48px;
 }
 
 .slider p {
-  margin-top: 0;
+  margin-top: 1px;
   margin-bottom: 0;
 }
 
@@ -1108,10 +1156,6 @@ li:hover .buyBtns {
   padding: 0 25px;
 }
 
-.catalogItemBottom p {
-  margin-bottom: 15px;
-}
-
 .catalogItem img,
 .catalogItemBottom img {
   padding-top: 30px;
@@ -1138,13 +1182,14 @@ li:hover .buyBtns {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  align-items: center;
   -ms-flex-align: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
 
-  height: 128px;
+  height: 134px;
+  padding-top: 31px;
+  padding-right: 20px;
 }
 
 .buyBtn {
@@ -1263,7 +1308,7 @@ li:hover .buyBtns {
 
 .productList {
   width: 700px;
-  margin-top: 20px;
+  margin-top: 16px;
 }
 
 .container {
@@ -1347,6 +1392,11 @@ main fieldset {
 
 .sort p {
   display: inline;
+  margin-top: 5px;
+}
+
+.sliderDescription {
+  padding-top: 1px;
 }
 
 .siteNavItem a {
@@ -1356,7 +1406,6 @@ main fieldset {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  align-items: center;
   -ms-flex-align: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -1364,6 +1413,8 @@ main fieldset {
 
   width: 100%;
   height: 100%;
+
+  padding-top: 20px;
 }
 
 .topLevel {
@@ -1470,8 +1521,10 @@ main fieldset {
   color: white;
 }
 
-.catalogItem p {
-  margin-bottom: 15px;
+.catalogItem p, .catalogItemBottom p {
+  margin-bottom: 14px;
+  margin-top: 22px;
+  margin-left: -3px;
 }
 
 .productionsFieldset ul {
@@ -1494,7 +1547,7 @@ main fieldset {
 }
 
 .navYellow {
-  margin-top: -70px;
+  margin-top: -78px;
 }
 
 .footerTopBg {
@@ -1574,7 +1627,7 @@ main fieldset {
 }
 
 .rightSide nav {
-  padding-top: 20px;
+  padding-top: 22px;
   padding-bottom: 0;
 }
 
@@ -1742,6 +1795,7 @@ main fieldset {
   background-image: url("../img/delivery.png");
   background-repeat: no-repeat;
   background-position: right bottom;
+  background-position-y: 110px;
 }
 
 .serviceBtnDelivery span {
@@ -1800,7 +1854,7 @@ main fieldset {
 
   width: 60px;
   height: 10px;
-  margin-top: auto;
+  margin-top: -14px;
   margin-bottom: 10px;
   margin-left: -30px;
 
@@ -2011,6 +2065,7 @@ main fieldset {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-top: -6px;
 
   width: 100%;
 }
@@ -2166,6 +2221,7 @@ main fieldset {
   height: 38px;
   margin: 0;
   padding-left: 18px;
+  margin-top: -4px;
 
   border-radius: 5px;
   background-color: #f7f3ec;
@@ -2177,7 +2233,7 @@ main fieldset {
   margin: 0 auto;
   margin-top: 17px;
   padding-right: 0;
-  padding-bottom: 22px;
+  padding-bottom: 18px;
   padding-left: 0;
 }
 
@@ -2315,7 +2371,7 @@ button[type=submit] {
 
   width: 140px;
   height: 38px;
-  margin-top: 32px;
+  margin-top: 35px;
 
   cursor: pointer;
 
@@ -2380,6 +2436,7 @@ button[type=submit] {
   width: 95px;
   padding-top: 8px;
   padding-bottom: 10px;
+  padding-left: 21px;
 
   text-align: center;
 
@@ -2431,13 +2488,34 @@ button[type=submit] {
   box-shadow: 0 30px 50px rgba(0, 0, 0, .7);
 }
 
+.popupWindow {
+  position: fixed;
+  z-index: 200;
+  top: 5%;
+  left: 50%;
+
+  display: block;
+
+  width: 938px;
+
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-animation: bounce .4s;
+  animation: bounce .4s;
+
+  background: #fff;
+  -webkit-box-shadow: 0 30px 50px rgba(0, 0, 0, .7);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, .7);
+}
+
 .feedback form {
   display: block;
 
   margin-top: 0;
 }
 
-.modalClose {
+.modalClose, .popupClose {
   font: inherit;
 
   overflow: visible;
@@ -2452,7 +2530,7 @@ button[type=submit] {
   -webkit-appearance: button;
 }
 
-.modalClose::before {
+.modalClose::before, .popupClose::before {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -2470,7 +2548,7 @@ button[type=submit] {
   background: #ee3643;
 }
 
-.modalClose::after {
+.modalClose::after, .popupClose::after {
   position: absolute;
   top: 15px;
   right: 15px;
