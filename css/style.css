@@ -229,7 +229,7 @@ fieldset {
   background-color: white;
 }
 
-.find input:focus + .searchLabel {
+.findArea:focus + .searchLabel {
   opacity: 1;
   background: url("../img/icon-search-red.svg") no-repeat;
 }
@@ -455,9 +455,10 @@ fieldset {
 
 
 .login::before {
-  padding-right: 16px;
+  padding-right: 12px;
+  margin-left: 5px;
 
-  content: url("../img/icon-logout.svg");
+  content: url("../img/icon-login.svg");
 }
 
 .loginLink a:hover {
@@ -465,7 +466,7 @@ fieldset {
 }
 
 .login:hover::before {
-  content: url("../img/icon-logout-blue.svg");
+  content: url("../img/icon-login-blue.svg");
 
   opacity: 1;
 }
@@ -693,8 +694,6 @@ h2 {
   -webkit-box-align: center;
   align-items: center;
   -ms-flex-align: center;
-  -webkit-box-pack: stretch;
-  -ms-flex-pack: stretch;
   justify-content: stretch;
 
   width: 305px;
@@ -986,7 +985,8 @@ h2 {
   width: 253px;
   height: 37px;
   padding-top: 10px;
-  margin-top: 25px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .popularItemsHeader h2 {
@@ -2097,8 +2097,12 @@ main fieldset {
 }
 
 .sortByType {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 354px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -2575,7 +2579,7 @@ button[type=submit] {
 
   text-align: left;
 
-  color: #999;
+  color: black;
   border: 2px solid #999;
   border-radius: 3px;
   outline: none;
@@ -2693,4 +2697,93 @@ button[type=submit] {
 .catalogItemBottom:nth-child(2) img {
   padding-top: 32px;
   padding-left: 24px;
+}
+
+.formFooter textarea {
+  color: black;
+}
+
+.modalAddProduct {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  z-index: 200;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: block;
+  -webkit-animation: bounce .4s;
+  animation: bounce .4s;
+
+  border-top: 7px solid #ee3643;
+  width: 620px;
+
+  background: #fff;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, .7);
+}
+
+.modalAddProduct .icon {
+  position: relative;
+  display: inline-block;
+  margin: 47px 32px 50px 80px;
+  width: 66px;
+  height: 66px;
+  line-height: 42px;
+  font-family: "Arial", sans-serif;
+  vertical-align: middle;
+  text-decoration: none;
+  background: #693;
+  border-radius: 50px;
+}
+
+.add-product-button {
+  padding: 48px 0 46px;
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+  background: #f1f1f1;
+}
+
+.add-product-button .active-btn {
+  color: #fff;
+  background: #ee3643;
+}
+
+.add-product-button .btn {
+  width: 460px;
+  padding: 11px 49px;
+  margin-right: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.add-product-button .btn:last-child {
+  margin-right: 0;
+  background: #fff;
+  color: black;
+}
+
+.icon + span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 30px;
+
+  line-height: 18px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Cuprum", "Arial", sans-serif;
+  color: #000;
+  background: #fff;
+}
+
+.modalAddProduct .icon::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  width: 46px;
+  height: 42px;
+  background: url(../img/sprite.png) no-repeat;
+  background-position: -345px -91px;
 }
