@@ -75,7 +75,7 @@ a {
   color: #ef5c67;
 }
 
-fieldset {
+.costFieldset, .productionsFieldset {
   min-width: 0;
   margin: 0;
   padding: 0 0 0 0;
@@ -516,8 +516,8 @@ h2 {
 }
 
 .map img {
-  padding-top: 9px;
-  padding-bottom: 35px;
+  margin-top: 9px;
+  margin-bottom: 35px;
 }
 
 .about ul {
@@ -729,7 +729,7 @@ h2 {
   -ms-flex-pack: center;
   justify-content: center;
 
-  width: 149px;
+  width: 150px;
 
   text-align: center;
   padding-right: 12px;
@@ -895,7 +895,7 @@ h2 {
 }
 
 .breadcrumbs a {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
 
@@ -1138,7 +1138,7 @@ li:hover .buyBtns {
 }
 
 .catalogItemBottom {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 24px;
   font-weight: bold;
 
@@ -1333,13 +1333,9 @@ main {
 }
 
 main legend {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 17px;
   font-weight: bold;
-}
-
-main fieldset {
-  border: 0;
 }
 
 .siteNavList {
@@ -1485,7 +1481,7 @@ main fieldset {
 }
 
 .catalogItem {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 24px;
   font-weight: bold;
 
@@ -1753,7 +1749,7 @@ main fieldset {
 }
 
 .smallText {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 23px;
 }
@@ -1817,7 +1813,7 @@ main fieldset {
 }
 
 .serviceBlockRight p {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
 
@@ -2034,7 +2030,7 @@ main fieldset {
 }
 
 .sort p {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
 
@@ -2063,7 +2059,7 @@ main fieldset {
 }
 
 .sortBy a {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -2193,7 +2189,7 @@ main fieldset {
 }
 
 .formHeader {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
 
@@ -2352,7 +2348,7 @@ main fieldset {
 }
 
 button[type=submit] {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
 
