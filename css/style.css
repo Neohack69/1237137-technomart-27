@@ -1994,7 +1994,7 @@ main legend {
   cursor: pointer;
 
   opacity: .3;
-  background: url(../img/icon-search.svg) no-repeat;
+  background: url("../img/icon-search.svg") no-repeat;
 }
 
 .breadcrumbs {
@@ -2780,6 +2780,6 @@ button[type=submit] {
   left: 12px;
   width: 46px;
   height: 42px;
-  background: url(../img/sprite.png) no-repeat;
+  background: url("../img/sprite.png") no-repeat;
   background-position: -345px -91px;
 }
